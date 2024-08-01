@@ -30,35 +30,52 @@ const HomeSliderScreen = () => {
         }
     }
 
-    const handleTouchOpeningSlider = (e) => {
-        console.log(e);
-    }
+// DETECT TOUCH SWIPE FOR MOBILE
+    const handleTouchStart = (e) => {
+        swipeTemp = e.changedTouches[0].clientY;
+    };
+
+    const handleTouchEnd = (e) => {
+        const touchEndY = e.changedTouches[0].clientY;
+        const deltaY = touchEndY - swipeTemp;
+
+        if (deltaY < 0) {
+            setswipe('UP');
+        } else if (deltaY > 0) {
+            setswipe('DOWN');
+        }
+    };
  
     useEffect(() => {
         let mainSlider = document.getElementById('HomeSlider')
+        const touchStartHandler = (e) => handleTouchStart(e);
+        const touchEndHandler = (e) => handleTouchEnd(e);
+
+        window.addEventListener('touchstart', touchStartHandler);
+        window.addEventListener('touchend', touchEndHandler);
+
         if (!Open) {
             const wheelHandler = (e) => handleOpeningSlider(e);
-            const touchStartHandler = (e) => handleTouchOpeningSlider(e);
-
             window.addEventListener('wheel', wheelHandler);
-            window.addEventListener('touchmove', touchStartHandler);
 
             return () => {
                 window.removeEventListener('wheel', wheelHandler);
-                window.removeEventListener('touchmove', touchStartHandler);
             };
         }
         else {
             if(mainSlider) {
                 mainSlider.addEventListener('wheel', handleClosingSlider)
-                
                 return () => {
                     mainSlider.removeEventListener('wheel', handleClosingSlider)
                 }
             }
         }
+        return () => {
+            window.removeEventListener('touchstart', touchStartHandler);
+            window.removeEventListener('touchend', touchEndHandler);
+        }
     }, [Open])
-
+    
     // TO MAKE SURE THE SLIDER SHOW THE TOP IN THE BEGINING
     useEffect(() => {
         let mainSlider = document.getElementById('HomeSlider')
@@ -81,6 +98,24 @@ const HomeSliderScreen = () => {
             gsap.set('#HomeSlider', {overflow:'hidden'})
         }
     }
+
+
+    // OPEN and CLOSE WHEN USER SWIPES
+    useEffect(() => {
+        if(swipe === "UP") {
+            setOpen(true)
+            gsap.to('#HomeSlider', {bottom:"0%", duration:1})
+            gsap.set('#HomeSlider', {overflow:'scroll'})
+        }
+        else if(swipe === "DOWN") {
+            let mainSlider = document.getElementById('HomeSlider')
+            if(mainSlider.scrollTop === 0) {
+                setOpen(false)
+                gsap.to('#HomeSlider', {bottom:"-85%", duration:1})
+                gsap.set('#HomeSlider', {overflow:'hidden'})
+            }
+        }
+    },[swipe]) 
 
   return (
     <main id='HomeSlider' className=' size-11/12 fixed z-50 rounded-xl bottom-[-85%] left-1/2 -translate-x-1/2 overflow-hidden bg-gradient-to-b from-[#ffc700] from-5% to-10% to-white'>
