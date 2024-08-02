@@ -4,6 +4,12 @@ import Image from 'next/image'
 import React, { useEffect, useState } from 'react'
 import Carousel from './Carousel'
 import gsap from 'gsap'
+import ProjectVisionSection from './ProjectVisionSection'
+import RoadMapSection from './RoadMapSection'
+import TokenomicsSection from './TokenomicsSection'
+import MerchSection from './MerchSection'
+import SocialSection from './SocialSection'
+import SocialMediaLinksSection from './SocialMediaLinksSection'
 
 const kumbh = Kumbh_Sans({subsets:['latin']})
 const mont = Montserrat({subsets:['cyrillic'], adjustFontFallback:false})
@@ -17,6 +23,7 @@ const HomeSliderScreen = () => {
             setOpen(true)
             gsap.to('#HomeSlider', {bottom:"0%", duration:1})
             gsap.set('#HomeSlider', {overflow:'scroll'})
+            gsap.set('#SliderContentHideBar', {display:'none'})
         }
     };
 
@@ -91,6 +98,8 @@ const HomeSliderScreen = () => {
             setOpen(true)
             gsap.to('#HomeSlider', {bottom:"0%", duration:1})
             gsap.set('#HomeSlider', {overflow:'scroll'})
+            gsap.set('#SliderContentHideBar', {display:'none'})
+
         }
         else {
             setOpen(false)
@@ -106,6 +115,8 @@ const HomeSliderScreen = () => {
             setOpen(true)
             gsap.to('#HomeSlider', {bottom:"0%", duration:1})
             gsap.set('#HomeSlider', {overflow:'scroll'})
+            gsap.set('#SliderContentHideBar', {display:'none'})
+
         }
         else if(swipe === "DOWN") {
             let mainSlider = document.getElementById('HomeSlider')
@@ -119,6 +130,9 @@ const HomeSliderScreen = () => {
 
   return (
     <main id='HomeSlider' className=' size-11/12 fixed z-50 rounded-xl bottom-[-85%] left-1/2 -translate-x-1/2 overflow-hidden bg-gradient-to-b from-[#ffc700] from-5% to-10% to-white'>
+    <div id='SliderContentHideBar' className=' bg-[#ffc700] py-4 flex justify-center items-center sticky top-0 left-0 w-full pointer-events-none z-50'>
+        <button onClick={OpeningORClosingSlider} className=' rounded-full bg-[#FFF6A1] w-32 h-3'></button>
+    </div>
     {/* FIRST SECTION */}
     <section className=' relative h-[110%] w-full'>
     <div className=' py-4 flex justify-center items-center relative z-10'>
@@ -135,6 +149,18 @@ const HomeSliderScreen = () => {
     </section>
 {/* CAROUSEL SECTION */}
 <Carousel/>
+{/* PROJECT VISION */}
+<ProjectVisionSection/>
+{/* ROAD MAP */}
+<RoadMapSection/>
+{/* TOKENOMICS */}
+<TokenomicsSection/>
+{/* MERCH */}
+<MerchSection/>
+{/* SOCIAL HEADINGS */}
+<SocialSection/>
+{/* SOCAL LINKS */}
+<SocialMediaLinksSection/>
     </main>
   )
 }

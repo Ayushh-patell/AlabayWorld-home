@@ -32,10 +32,33 @@ color: white;
 }
 
 #HomeSliderGradient {
-  background: rgb(255,242,128);
-  background: radial-gradient(circle, rgba(255,242,128,1) 0%, rgb(255, 199, 0) 60%);
+  background: #fff280;
+  background: radial-gradient(circle, #fff280 0%, #ffc700 60%);
 }
-/* FFC700 */
+#ProjectVisionGradent {
+  background: #fff280;
+  background: radial-gradient(circle at 50% 60%, #fff280 0%, #ffc700 30%);
+}
+#tokenomicsGradient {
+  position: relative;
+  background: #fff280;
+  background: radial-gradient(circle at 50% 30%, #fff280 0%, #ffc700 30%);
+}
+#socialGradient {
+  background: #fff280;
+  background: radial-gradient(circle at 50% 40%, #fff280 0%, #ffc700 30%);
+}
+#tokenomicsGradient::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 100%;
+  width: 100%;
+  height: 2px;
+  background-color: #ffc700;
+}
+
+ /* FFC700 */
 @layer utilities {
   .text-balance {
     text-wrap: balance;
