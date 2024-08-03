@@ -9,7 +9,7 @@ const SocialMediaLinksSection = () => {
     <div className=' w-full flex justify-between items-end p-5 pt-10 gap-5'>
     <div className=' w-1/2 p-20 pr-0'>
         <div className=' w-full relative'>
-            <Image src={'/ChatBubble.png'} alt='chat bubble' width={200} height={150} className=' relative z-0 w-full object-contain object-center'/>
+            <Image src={'/ChatBubble.svg'} alt='chat bubble' width={200} height={150} className=' relative z-0 w-full object-contain object-center'/>
             <div className=' absolute z-10 top-0 left-0 w-full h-full p-5 flex justify-center items-start flex-col gap-8'>
             
                 <div className=' flex justify-start items-center gap-5 px-10'>

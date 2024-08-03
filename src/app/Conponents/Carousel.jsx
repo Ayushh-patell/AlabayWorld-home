@@ -2,12 +2,15 @@ import gsap from 'gsap'
 import { Montserrat } from 'next/font/google'
 import Image from 'next/image'
 import React, { useEffect, useState } from 'react'
+import { SlideData } from '../SlideData'
+import CarouselPhotoVideoItem from './CarouseltemPhotoVideo/CarouselPhotoVideoItem'
 
 const mont = Montserrat({subsets:['cyrillic'], adjustFontFallback:false})
 const Carousel = () => {
     const [active, setactive] = useState('ALL')
-    const SlideData = ['photo 1','photo 2','photo 3','photo 4','photo 5','photo 6','photo 7','photo 8','photo 9','photo 10','photo 11',]
+    // const SlideData = ['photo 1','photo 2','photo 3','photo 4','photo 5','photo 6','photo 7','photo 8','photo 9','photo 10','photo 11',]
     const [slide, setslide] = useState(1);
+    const [currentData, setcurrentData] = useState([...SlideData])
     const [updatedSlideData, setupdatedSlideData] = useState([]);
     const [slideNum, setslideNum] = useState(0)
     const [ismobile, setismobile] = useState(true)
@@ -20,33 +23,51 @@ const Carousel = () => {
             setismobile(val)
         }
     },[])
+
+    const setcarouselData = (currentArray) => {
+        let newarr = []
+        if(window && window.innerWidth>1024) {
+            for (let i = 0; i < currentArray.length; i+=3) {
+    
+                const subarray = currentArray.slice(i, i + 3);
+    
+                // Check if subarray has at least one element before pushing
+                if (subarray.length > 0) {
+                  newarr.push(subarray);
+                } 
+            }
+  
+            let num = Math.ceil(currentArray.length/3)-1
+            setslideNum(num+2)
+        }
+        else {
+            newarr = currentArray
+            setslideNum(currentArray.length+1)
+        }
+          //   ADD FIRST ELEMENT TO LAST AND LAST TO FIRST FOR INFINITE INTERVAL
+          newarr.push(newarr[0])
+          newarr.unshift(newarr[newarr.length-2])
+          setupdatedSlideData(newarr)
+    }
   
     useEffect(() => {
-      let newarr = []
-      if(window && window.innerWidth>1024) {
-          for (let i = 0; i < SlideData.length; i+=3) {
-  
-              const subarray = SlideData.slice(i, i + 3);
-  
-              // Check if subarray has at least one element before pushing
-              if (subarray.length > 0) {
-                newarr.push(subarray);
-              } 
-          }
-
-          let num = Math.ceil(SlideData.length/3)-1
-          setslideNum(num+2)
-      }
-      else {
-          newarr = SlideData
-          setslideNum(SlideData.length+1)
-      }
-        //   ADD FIRST ELEMENT TO LAST AND LAST TO FIRST FOR INFINITE INTERVAL
-        newarr.push(newarr[0])
-        newarr.unshift(newarr[newarr.length-2])
-        setupdatedSlideData(newarr)
-
+        setcarouselData(currentData)
     },[])
+
+    // CHANGE THE CURRENT DATA FOR CAROUSEL WHEN ACTIVE TAB IS CHANGED
+    useEffect(() => {
+        let newArr = [...SlideData]
+        if(active==="PHOTOS") {
+            newArr = newArr.filter((data) => data.type==="photo")
+        }
+        else if (active==="VIDEOS") {
+            newArr = newArr.filter((data) => data.type==="video")
+        }
+        setcurrentData(newArr)
+        setslide(1)
+        gsap.set('.Slide', {translateX:"-100%"})
+        setcarouselData(newArr)
+    },[active])
   
     const slideLeft = () => {
         setdisableLeft(true)
@@ -95,7 +116,7 @@ const Carousel = () => {
         {ismobile? 
                 <div className=" w-full h-full overflow-hidden lg:hidden flex justify-start items-center relative px-5 py-1">
                     {updatedSlideData.map((data,i) => (
-                        <div key={i} className='Slide -translate-x-full h-full w-full rounded-lg bg-[#a6a6a6] hover:ring-4 hover:ring-[#353535] flex justify-center items-center font-black text-black'>{data}</div>
+                        <div key={i} className='Slide -translate-x-full h-full w-full rounded-lg overflow-hidden bg-[#a6a6a6] hover:ring-4 hover:ring-[#353535] flex justify-center items-center font-black text-black'><CarouselPhotoVideoItem data={data}/></div>
                     ))}
                 </div>
             :
@@ -103,7 +124,7 @@ const Carousel = () => {
                 {updatedSlideData.map((arr,i) => (
                     <div key={i} className='Slide -translate-x-full w-full flex-shrink-0 h-full flex justify-start items-center gap-5 px-5 py-1'>
                     {arr.map((data, idx) => {
-                    return <div key={idx} className=' h-full w-1/3 rounded-lg bg-[#a6a6a6] hover:ring-4 hover:ring-[#353535] flex justify-center items-center font-black text-black'>{data}</div>
+                    return <div key={idx} className=' h-full w-1/3 rounded-lg overflow-hidden bg-[#a6a6a6] hover:ring-4 hover:ring-[#353535] flex justify-center items-center font-black text-black'><CarouselPhotoVideoItem data={data}/></div>
                     })}
                     </div>
                 ))}
