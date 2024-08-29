@@ -11,10 +11,10 @@ const MerchSection = () => {
 
       {/* MERCH CAROUSEL */}
       <div className=' w-full p-8 px-16 flex justify-start items-center gap-2 relative overflow-hidden z-10'>
-        <div className=' w-full h-[250px] rounded-3xl bg-yellow-300 flex-shrink-0 -translate-x-full'></div>
-        <div className=' w-full h-[250px] rounded-3xl bg-yellow-300 flex-shrink-0 -translate-x-full'></div>
-        <div className=' w-full h-[250px] rounded-3xl bg-yellow-300 flex-shrink-0 -translate-x-full'></div>
-        <div className=' w-full h-[250px] rounded-3xl bg-yellow-300 flex-shrink-0 -translate-x-full'></div>
+        <div className=' w-full h-[350px] rounded-3xl bg-yellow-300 flex-shrink-0 -translate-x-full'></div>
+        <div className=' w-full h-[350px] rounded-3xl bg-yellow-300 flex-shrink-0 -translate-x-full'></div>
+        <div className=' w-full h-[350px] rounded-3xl bg-yellow-300 flex-shrink-0 -translate-x-full'></div>
+        <div className=' w-full h-[350px] rounded-3xl bg-yellow-300 flex-shrink-0 -translate-x-full'></div>
 
         <div className=' absolute top-1/2 -translate-y-1/2 left-10 rounded-full p-1 bg-white shadow-xl'>
             <Image src={'/merchArrow.svg'} alt='Arrow Left' width={50} height={50} className=' rotate-180 size-10 object-contain object-center'/>

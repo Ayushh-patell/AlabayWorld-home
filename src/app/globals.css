@@ -10,12 +10,26 @@
   font-family: 'helvatica';
   src: url('../../public/helvetica\ black.otf');
 }
+@font-face {
+  font-family: 'helvatica-normal';
+  src: url('../../public/Helvetica.ttf');
+}
+@font-face {
+  font-family: baron;
+  src: url('../../public/Baron\ Kuffner.otf');
+}
 
 .font-burga {
   font-family: 'cheeseburga' ,sans-serif;
 }
 .font-hel { 
   font-family: 'helvatica', sans-serif;
+}
+.font-hel-normal { 
+  font-family: 'helvatica-normal', sans-serif;
+}
+.font-baron {
+  font-family: 'baron', sans-serif;
 }
 
 body {
@@ -44,9 +58,9 @@ color: white;
   background: #fff280;
   background: radial-gradient(circle at 50% 30%, #fff280 0%, #ffc700 30%);
 }
-#socialGradient {
+#gamesGradient {
   background: #fff280;
-  background: radial-gradient(circle at 50% 40%, #fff280 0%, #ffc700 30%);
+  background: radial-gradient(circle at 50% 30%, #fff280 0%, #ffc700 30%);
 }
 #tokenomicsGradient::after {
   content: "";

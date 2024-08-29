@@ -8,8 +8,9 @@ import ProjectVisionSection from './ProjectVisionSection'
 import RoadMapSection from './RoadMapSection'
 import TokenomicsSection from './TokenomicsSection'
 import MerchSection from './MerchSection'
-import SocialSection from './SocialSection'
+import SocialSection from './Games components/GamesSection'
 import SocialMediaLinksSection from './SocialMediaLinksSection'
+import GameSection from './Games components/GamesSection'
 
 const kumbh = Kumbh_Sans({subsets:['latin']})
 const mont = Montserrat({subsets:['cyrillic'], adjustFontFallback:false})
@@ -157,8 +158,8 @@ const HomeSliderScreen = () => {
 <TokenomicsSection/>
 {/* MERCH */}
 <MerchSection/>
-{/* SOCIAL HEADINGS */}
-<SocialSection/>
+{/* GAME SECTION */}
+<GameSection/>
 {/* SOCAL LINKS */}
 <SocialMediaLinksSection/>
     </main>

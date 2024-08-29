@@ -6,7 +6,10 @@ import React from 'react'
 const mont = Montserrat({subsets:['cyrillic'], adjustFontFallback:false})
 const SocialMediaLinksSection = () => {
   return (
-    <div className=' w-full flex justify-between items-end p-5 pt-10 gap-5'>
+    <div className=' w-full p-5 pt-10 bg-white'>
+        <h2 className=' text-9xl font-burga text-[#FFA800] pt-20 pb-28 px-10 relative z-10'>SOCIAL MEDIA <br /> LINKS</h2>
+    <div className=' w-full flex justify-between items-end  gap-5'>
+
     <div className=' w-1/2 p-20 pr-0'>
         <div className=' w-full relative'>
             <Image src={'/ChatBubble.svg'} alt='chat bubble' width={200} height={150} className=' relative z-0 w-full object-contain object-center'/>
@@ -32,6 +35,7 @@ const SocialMediaLinksSection = () => {
 
     <div className=' w-1/2 relative z-10 h-full'>
         <Image src={'/SocialLinks.png'} alt=' dog' width={400} height={1000} className=' w-full px-10 absolute -bottom-10 left-1/2 -translate-x-1/2 object-contain object-center z-10' />
+    </div>
     </div>
     </div>
   )
