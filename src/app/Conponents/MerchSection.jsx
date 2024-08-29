@@ -11,10 +11,58 @@ const MerchSection = () => {
 
       {/* MERCH CAROUSEL */}
       <div className=' w-full p-8 px-16 flex justify-start items-center gap-2 relative overflow-hidden z-10'>
-        <div className=' w-full h-[350px] rounded-3xl bg-yellow-300 flex-shrink-0 -translate-x-full'></div>
-        <div className=' w-full h-[350px] rounded-3xl bg-yellow-300 flex-shrink-0 -translate-x-full'></div>
-        <div className=' w-full h-[350px] rounded-3xl bg-yellow-300 flex-shrink-0 -translate-x-full'></div>
-        <div className=' w-full h-[350px] rounded-3xl bg-yellow-300 flex-shrink-0 -translate-x-full'></div>
+        <div className=' w-full h-[350px] rounded-3xl bg-[#FFEE88DD]/85 flex-shrink-0 -translate-x-full px-16 flex justify-between items-center gap-3'>
+          <div className=' w-1/3 h-full flex flex-col justify-center items-start'>
+            <p className=' text-[#9d9460]/85 font-burga text-6xl'>DESIGNS</p>
+            <p className=' text-6xl font-burga text-[#353535]'>PAW-FECTLY</p>
+            <p className=' font-hel-bold text-xl text-[#353535] mb-6'>Suited for you!</p>
+            <button className={` rounded-full px-5 py-3 flex justify-center items-center gap-3 text-white bg-[#353535] ${mont.className}`}>Discover<Image src={'/Thin Arrow.png'} alt='arrow' width={12} height={12} className=' object-contain object-center'/></button>
+          </div>
+
+          <div className=' w-2/3 h-full'>
+            <Image src={'/tshirt mockup 2.png'} style={{maskImage:"linear-gradient(90deg, black 98%, transparent 99%)"}} alt='tshirt' width={300} height={150} className=' w-full h-full object-cover object-bottom'/>
+          </div>
+
+        </div>
+        <div className=' w-full h-[350px] rounded-3xl bg-[#FFEE88DD]/85 flex-shrink-0 -translate-x-full px-16 flex justify-between items-center gap-3'>
+          <div className=' w-1/3 h-full flex flex-col justify-center items-start'>
+            <p className=' text-[#9d9460]/85 font-burga text-6xl'>DESIGNS</p>
+            <p className=' text-6xl font-burga text-[#353535]'>PAW-FECTLY</p>
+            <p className=' font-hel-bold text-xl text-[#353535] mb-6'>Suited for you!</p>
+            <button className={` rounded-full px-5 py-3 flex justify-center items-center gap-3 text-white bg-[#353535] ${mont.className}`}>Discover<Image src={'/Thin Arrow.png'} alt='arrow' width={12} height={12} className=' object-contain object-center'/></button>
+          </div>
+
+          <div className=' w-2/3 h-full'>
+            <Image src={'/tshirt mockup 2.png'} style={{maskImage:"linear-gradient(90deg, black 98%, transparent 99%)"}} alt='tshirt' width={300} height={150} className=' w-full h-full object-cover object-bottom'/>
+          </div>
+
+        </div>
+        <div className=' w-full h-[350px] rounded-3xl bg-[#FFEE88DD]/85 flex-shrink-0 -translate-x-full px-16 flex justify-between items-center gap-3'>
+          <div className=' w-1/3 h-full flex flex-col justify-center items-start'>
+            <p className=' text-[#9d9460]/85 font-burga text-6xl'>DESIGNS</p>
+            <p className=' text-6xl font-burga text-[#353535]'>PAW-FECTLY</p>
+            <p className=' font-hel-bold text-xl text-[#353535] mb-6'>Suited for you!</p>
+            <button className={` rounded-full px-5 py-3 flex justify-center items-center gap-3 text-white bg-[#353535] ${mont.className}`}>Discover<Image src={'/Thin Arrow.png'} alt='arrow' width={12} height={12} className=' object-contain object-center'/></button>
+          </div>
+
+          <div className=' w-2/3 h-full'>
+            <Image src={'/tshirt mockup 2.png'} style={{maskImage:"linear-gradient(90deg, black 98%, transparent 99%)"}} alt='tshirt' width={300} height={150} className=' w-full h-full object-cover object-bottom'/>
+          </div>
+
+        </div>
+        <div className=' w-full h-[350px] rounded-3xl bg-[#FFEE88DD]/85 flex-shrink-0 -translate-x-full px-16 flex justify-between items-center gap-3'>
+          <div className=' w-1/3 h-full flex flex-col justify-center items-start'>
+            <p className=' text-[#9d9460]/85 font-burga text-6xl'>DESIGNS</p>
+            <p className=' text-6xl font-burga text-[#353535]'>PAW-FECTLY</p>
+            <p className=' font-hel-bold text-xl text-[#353535] mb-6'>Suited for you!</p>
+            <button className={` rounded-full px-5 py-3 flex justify-center items-center gap-3 text-white bg-[#353535] ${mont.className}`}>Discover<Image src={'/Thin Arrow.png'} alt='arrow' width={12} height={12} className=' object-contain object-center'/></button>
+          </div>
+
+          <div className=' w-2/3 h-full'>
+            <Image src={'/tshirt mockup 2.png'} style={{maskImage:"linear-gradient(90deg, black 98%, transparent 99%)"}} alt='tshirt' width={300} height={150} className=' w-full h-full object-cover object-bottom'/>
+          </div>
+
+        </div>
 
         <div className=' absolute top-1/2 -translate-y-1/2 left-10 rounded-full p-1 bg-white shadow-xl'>
             <Image src={'/merchArrow.svg'} alt='Arrow Left' width={50} height={50} className=' rotate-180 size-10 object-contain object-center'/>
