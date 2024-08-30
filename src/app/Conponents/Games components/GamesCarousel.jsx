@@ -13,11 +13,6 @@ const GamesCarousel = () => {
     const [disableRight, setdisableRight] = useState(false);
 
 
-    // useEffect(() => {
-    //     setcurrentSlide(GameSlideData[slide]);
-    //     gsap.to(".GameSlide", {translateX:`-${slide*100}%`, duration:1, ease:"power1.inOut", onComplete:(() => {setdisableRight(false)})});
-    // },[slide]);
-
     const slideRight = () => {
         setdisableRight(true);
         
@@ -57,7 +52,7 @@ const GamesCarousel = () => {
                         </div>
 
                     {/* DISCOVER BUTTON */}
-                    <Link href={currentSlide.link}><button className={` absolute bottom-32 left-1/2 -translate-x-1/2 flex justify-center items-center gap-3 px-7 pr-5 py-2 text-lg font-black text-white transition-all duration-500 rounded-full ${mont.className}`} style={{backgroundColor:`${currentSlide.color}`, boxShadow:"5px 5px 5px rgba(0,0,0,0.5)"}}>DISCOVER <Image src={'/Thin Arrow.png'} alt='arrow' width={23} height={20} className=' object-contain object-center'/></button></Link>
+                    <Link href={currentSlide.link}><button className={` active:scale-90 transition-all duration-300 absolute bottom-32 left-1/2 -translate-x-1/2 flex justify-center items-center gap-3 px-7 pr-5 py-2 text-lg font-black text-white rounded-full ${mont.className}`} style={{backgroundColor:`${currentSlide.color}`, boxShadow:"5px 5px 5px rgba(0,0,0,0.5)"}}>DISCOVER <Image src={'/Thin Arrow.png'} alt='arrow' width={23} height={20} className=' object-contain object-center'/></button></Link>
 
 
             </div>
