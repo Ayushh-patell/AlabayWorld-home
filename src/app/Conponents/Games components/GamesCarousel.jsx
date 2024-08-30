@@ -33,6 +33,17 @@ const GamesCarousel = () => {
         };
     };
 
+    //  AUTO PLAY
+    useEffect(() => {
+        let autoplay;
+        clearInterval(autoplay);
+        autoplay = setInterval(() => {            
+            slideRight();
+        }, 4000);
+
+        return () => clearInterval(autoplay);
+    },[slide])
+
   return (
         <div className=' w-full relative z-10 pt-12'>
             {/* <button onClick={slideLeft} disabled={disableLeft} className=' active:scale-90 transition-all duration-300 w-10 flex-shrink-0 p-2 aspect-[3/4] rounded-lg bg-[#353535]' style={{boxShadow:'4px 3px 10px rgba(0,0,0,0.65)'}}><Image src={'/Arrow.svg'} alt='Arrow Left' width={50} height={50} className=' w-fulll rotate-180'/></button> */}
