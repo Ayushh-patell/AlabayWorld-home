@@ -19,7 +19,7 @@ const MerchSection = () => {
           <div className=' sm_2:w-1/3 w-[30%] h-full flex flex-col justify-center items-start'>
             <p className=' text-[#9d9460]/85 font-burga xl:text-6xl lg:text-5xl md_2:text-4xl sm:text-3xl sm_1:text-xl text-sm'>DESIGNS</p>
             <p className=' xl:text-6xl lg:text-5xl md_2:text-4xl sm:text-3xl sm_1:text-xl text-sm font-burga text-[#353535]'>PAW-FECTLY</p>
-            <p className=' font-hel-bold md_2:text-xl sm:text-base text-xs md_2:text-[#353535] text-white sm:mb-6 mb-3'>Suited for you!</p>
+            <p className=' font-hel-bold md_2:text-xl sm:text-base text-[9px] md_2:text-[#353535] text-white sm:mb-6 mb-3'>Suited for you!</p>
             <button className={` rounded-full md_2:px-5 sm:px-3 px-2 md_2:py-3 sm:py-2 py-1 flex justify-center items-center gap-3 sm:text-white text-[9px] bg-[#353535] ${mont.className}`}>Discover<Image src={'/Thin Arrow.png'} alt='arrow' width={12} height={12} className=' object-contain object-center'/></button>
           </div>
 
