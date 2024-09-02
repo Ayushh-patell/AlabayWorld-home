@@ -44,8 +44,12 @@ color: white;
 .textShadow {
   filter: drop-shadow(10px 10px #0F1B29);
 }
+.tokenomicsCard {
+  box-shadow: 10px 10px 15px #A87D29;
+}
 
 #HomeSliderGradient {
+  clip-path:polygon(0% 0%, 100% 0%, 100% 100%, 0px 86.5%);
   background: #fff280;
   background: radial-gradient(circle, #fff280 0%, #ffc700 60%);
 }
@@ -55,6 +59,7 @@ color: white;
 }
 #tokenomicsGradient {
   position: relative;
+  clip-path: polygon(0% 10%, 100% 0%, 100% 100%, 0% 90%);
   background: #fff280;
   background: radial-gradient(circle at 50% 30%, #fff280 0%, #ffc700 30%);
 }
@@ -71,11 +76,37 @@ color: white;
   height: 2px;
   background-color: #ffc700;
 }
+#roadMapMobileGradient {
+  background: #fff280;
+  background: radial-gradient(circle at 50% 40%, #fff280 0%, #ffc700 40%);
+}
 
  /* FFC700 */
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+}
+@media screen and (max-width:900px) {
+  #HomeSliderGradient {
+    clip-path:polygon(0% 0%, 100% 0%, 100% 100%, 0px 93%);
+    background: radial-gradient( circle at 50% 30%, #fff280 0%, #ffc700 60%);
+  }
+  #tokenomicsGradient {
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+    background: white;
+  }
+  #tokenomicsGradient::after {
+    background-color: white;
+  }
+  .tokenomicsCard {
+    box-shadow: 10px 10px 15px #717171;
+  }
+}
+
+@media screen and (max-width:500px) {
+  .textShadow {
+    filter: drop-shadow(5px 5px #0F1B29);
   }
 }
 

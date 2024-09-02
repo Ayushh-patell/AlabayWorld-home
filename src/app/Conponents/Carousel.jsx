@@ -13,37 +13,27 @@ const Carousel = () => {
     const [currentData, setcurrentData] = useState([...SlideData])
     const [updatedSlideData, setupdatedSlideData] = useState([]);
     const [slideNum, setslideNum] = useState(0)
-    const [ismobile, setismobile] = useState(true)
     const [disableLeft, setdisableLeft] = useState(false)
     const [disableRight, setdisableRight] = useState(false)
 
-    useEffect(() => {
-        if(window) {
-            let val = window.innerWidth<1024
-            setismobile(val)
-        }
-    },[])
+
 
     const setcarouselData = (currentArray) => {
         let newarr = []
-        if(window && window.innerWidth>1024) {
-            for (let i = 0; i < currentArray.length; i+=3) {
+        for (let i = 0; i < currentArray.length; i+=3) {
     
-                const subarray = currentArray.slice(i, i + 3);
-    
-                // Check if subarray has at least one element before pushing
-                if (subarray.length > 0) {
-                  newarr.push(subarray);
-                } 
-            }
-  
-            let num = Math.ceil(currentArray.length/3)-1
-            setslideNum(num+2)
+            const subarray = currentArray.slice(i, i + 3);
+
+            // Check if subarray has at least one element before pushing
+            if (subarray.length > 0) {
+              newarr.push(subarray);
+            } 
         }
-        else {
-            newarr = currentArray
-            setslideNum(currentArray.length+1)
-        }
+
+        let num = Math.ceil(currentArray.length/3)-1
+        setslideNum(num+2)
+
+
           //   ADD FIRST ELEMENT TO LAST AND LAST TO FIRST FOR INFINITE INTERVAL
           newarr.push(newarr[0])
           newarr.unshift(newarr[newarr.length-2])
@@ -102,36 +92,29 @@ const Carousel = () => {
   
 
   return (
-    <section className=' bg-white w-full py-10'>
+    <section className=' md_2:bg-white w-full md_2:pb-10 md_1:pt-10 pt-20 pb-20  relative z-10'>
     {/* TOP BAR TO SWITCH */}
-        <div className={` w-full flex justify-center items-center gap-7 ${mont.className} font-black text-[#353535] mb-7`}>
-            <button onClick={() => {setactive("ALL")}} className={`${active==="ALL" && " text-[#FFA800]"}`}>ALL</button>
-            <button onClick={() => {setactive("PHOTOS")}} className={`${active==="PHOTOS" && " text-[#FFA800]"}`}>PHOTOS</button>
-            <button onClick={() => {setactive("VIDEOS")}} className={`${active==="VIDEOS" && " text-[#FFA800]"}`}>VIDEOS</button>
+        <div className={` w-full flex justify-center items-center sm:gap-7 gap-5 ${mont.className} font-black sm:text-base text-sm text-[#353535] sm:mb-7 mb-3`}>
+            <button onClick={() => {setactive("ALL")}} className={`${active==="ALL" && " md_2:text-[#FFA800] text-white"}`}>ALL</button>
+            <button onClick={() => {setactive("PHOTOS")}} className={`${active==="PHOTOS" && " md_2:text-[#FFA800] text-white"}`}>PHOTOS</button>
+            <button onClick={() => {setactive("VIDEOS")}} className={`${active==="VIDEOS" && " md_2:text-[#FFA800] text-white"}`}>VIDEOS</button>
         </div>
         {/* CAROUSEL */}
-        <div className=' w-full flex justify-center items-center gap-7'>
-            <button onClick={slideLeft} disabled={disableLeft} className=' active:scale-90 transition-all duration-300 w-10 flex-shrink-0 p-2 aspect-[3/4] rounded-lg bg-[#353535]' style={{boxShadow:'4px 3px 10px rgba(0,0,0,0.65)'}}><Image src={'/Arrow.svg'} alt='Arrow Left' width={50} height={50} className=' w-fulll rotate-180'/></button>
-            <div className=' w-[80%] h-48 overflow-hidden'>
-        {ismobile? 
-                <div className=" w-full h-full overflow-hidden lg:hidden flex justify-start items-center relative px-5 py-1">
-                    {updatedSlideData.map((data,i) => (
-                        <div key={i} className='Slide -translate-x-full h-full w-full rounded-lg overflow-hidden bg-[#a6a6a6] hover:ring-4 hover:ring-[#353535] flex justify-center items-center font-black text-black'><CarouselPhotoVideoItem data={data}/></div>
-                    ))}
-                </div>
-            :
+        <div className=' w-full flex justify-center items-center sm:gap-7 gap-3 md:px-0 px-3'>
+            <button onClick={slideLeft} disabled={disableLeft} className=' active:scale-90 transition-all duration-300 sm:w-10 w-8 flex-shrink-0 p-2 aspect-[3/4] rounded-lg bg-[#353535]' style={{boxShadow:'4px 3px 10px rgba(0,0,0,0.65)'}}><Image src={'/Arrow.svg'} alt='Arrow Left' width={50} height={50} className=' w-fulll rotate-180'/></button>
+            <div className=' sm:w-[80%] w-[90%] md:h-48 sm:h-28 sm_2:h-20 h-14 overflow-hidden'>
+
             <div className=" w-full h-full overflow-hidden flex justify-start items-center relative">
                 {updatedSlideData.map((arr,i) => (
-                    <div key={i} className='Slide -translate-x-full w-full flex-shrink-0 h-full flex justify-start items-center gap-5 px-5 py-1'>
+                    <div key={i} className='Slide -translate-x-full w-full flex-shrink-0 h-full flex justify-start items-center sm_2:gap-5 gap-2 sm:px-5 px-1 py-1'>
                     {arr.map((data, idx) => {
-                    return <div key={idx} className=' h-full w-1/3 rounded-lg overflow-hidden bg-[#a6a6a6] hover:ring-4 hover:ring-[#353535] flex justify-center items-center font-black text-black'><CarouselPhotoVideoItem data={data}/></div>
+                    return <div key={idx} className=' h-full w-1/3 rounded-lg overflow-hidden md:bg-[#a6a6a6] bg-[#353535] sm:hover:ring-4 hover:ring-2 sm:hover:ring-[#353535] hover:ring-[#a6a6a6] flex justify-center items-center font-black text-black'><CarouselPhotoVideoItem data={data}/></div>
                     })}
                     </div>
                 ))}
             </div>
-            }
             </div>
-            <button onClick={slideRight} disabled={disableRight} className=' active:scale-90 transition-all duration-300 w-10 flex-shrink-0 p-2 aspect-[3/4] rounded-lg bg-[#353535]' style={{boxShadow:'4px 3px 10px rgba(0,0,0,0.65)'}}><Image src={'/Arrow.svg'} alt='Arrow Right' width={50} height={50} className=' w-ful'/></button>
+            <button onClick={slideRight} disabled={disableRight} className=' active:scale-90 transition-all duration-300 sm:w-10 w-8 flex-shrink-0 p-2 aspect-[3/4] rounded-lg bg-[#353535]' style={{boxShadow:'4px 3px 10px rgba(0,0,0,0.65)'}}><Image src={'/Arrow.svg'} alt='Arrow Right' width={50} height={50} className=' w-full'/></button>
         </div>
     </section>
   )

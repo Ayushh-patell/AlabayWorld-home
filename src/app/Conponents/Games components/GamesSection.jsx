@@ -5,11 +5,11 @@ import GamePreviews from "./GamePreviews"
 const mont = Montserrat({subsets:['cyrillic']})
 const GameSection = () => {
   return (
-    <section className=' w-full relative pt-10 bg-white'>
-    <h3 className=' py-5 pt-40 text-9xl text-white font-burga text-center relative z-10'>GAMES</h3>
+    <section className=' w-full relative sm:pt-10 bg-white'>
+    <h3 className=' md:py-5 py-3 md_2:pt-40 md_2:text-9xl sm:text-7xl text-4xl md_2:text-white text-[#ffc700] font-burga text-center relative z-10'>GAMES</h3>
 
     {/* <h2 className=' text-9xl font-burga text-white pt-20 pb-28 px-10 relative z-10'>SOCIAL MEDIA <br /> LINKS</h2> */}
-    <p className={` text-3xl text-[#353535] relative z-10 text-center ${mont.className} font-black py-3`}>Stay tuned for upcoming games !</p>
+    <p className={` md_2:text-3xl sm:text-2xl text-lg text-[#353535] relative z-10 text-center ${mont.className} font-black md:py-3 py-1`}>Stay tuned for upcoming games !</p>
 
     {/* GAME CAROUSEL */}
     <GamesCarousel/>
@@ -20,7 +20,7 @@ const GameSection = () => {
 
     <GamePreviews/>
 
-    <div className=' absolute top-0 left-0 w-full h-[60%] z-0' id='gamesGradient' style={{clipPath:"polygon(0% 0%, 100% 0%, 100% 100%, 0% 90%)"}}></div>
+    <div className=' absolute top-0 left-0 w-full h-[60%] z-0 md_2:block hidden' id='gamesGradient' style={{clipPath:"polygon(0% 0%, 100% 0%, 100% 100%, 0% 90%)"}}></div>
       
     </section>
   )

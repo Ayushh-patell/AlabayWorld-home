@@ -130,26 +130,34 @@ const HomeSliderScreen = () => {
     },[swipe]) 
 
   return (
-    <main id='HomeSlider' className=' size-11/12 fixed z-50 rounded-xl bottom-[-85%] left-1/2 -translate-x-1/2 overflow-hidden bg-gradient-to-b from-[#ffc700] from-5% to-10% to-white'>
-    <div id='SliderContentHideBar' className=' bg-[#ffc700] py-4 flex justify-center items-center sticky top-0 left-0 w-full pointer-events-none z-50'>
-        <button onClick={OpeningORClosingSlider} className=' rounded-full bg-[#FFF6A1] w-32 h-3'></button>
+    <main id='HomeSlider' className=' size-11/12 fixed z-50 rounded-xl md:bottom-[-85%] bottom-[-88%] left-1/2 -translate-x-1/2 overflow-hidden bg-gradient-to-b from-[#ffc700] to-white to-85%'>
+    <div id='SliderContentHideBar' className=' bg-[#ffc700] sm:py-4 py-3 flex justify-center items-center sticky top-0 left-0 w-full pointer-events-none z-50'>
+        <button onClick={OpeningORClosingSlider} className=' rounded-full sm:bg-[#FFF6A1] bg-[#353535] sm:w-32 w-20 sm:h-3 h-2'></button>
     </div>
     {/* FIRST SECTION */}
-    <section className=' relative h-[110%] w-full'>
-    <div className=' py-4 flex justify-center items-center relative z-10'>
-        <button onClick={OpeningORClosingSlider} className=' rounded-full bg-[#FFF6A1] w-32 h-3'></button>
+    <section className=' relative xl:h-[130%] md_2:h-[110%] w-full md_2:pb-0 sm_1:pb-20 pb-8 bg-white'>
+    <div className=' sm:py-4 py-3 flex justify-center items-center relative z-10'>
+        <button onClick={OpeningORClosingSlider} className=' rounded-full sm:bg-[#FFF6A1] bg-[#353535] sm:w-32 w-20 sm:h-3 h-2'></button>
     </div>
 
-    <div className=' w-1/2 ml-auto relative z-10 text-right pr-14'>
-        <h3 className={` text-[#F76902]/80 text-6xl ${mont.className} font-black my-12 mb-10`}>History Of</h3>
-        <p className=' font-burga text-9xl text-white my-6'>ALABAY</p>
-        <p className={` text-[#353535] ${kumbh.className} font-bold text-3xl`}>The Central Asian Shepherd Dog, also known as Alabay, has been a guardian of livestock and property for centuries. Originating from Central Asia, these dogs are renowned for their courage, strength, and loyalty.</p>
+    <div className=' md_1:w-1/2 md:w-1/3 sm_1:w-[35%] sm_2:w-2/5 w-[45%] ml-auto relative z-10 text-right md_1:pr-14 sm_1:pr-8 pr-5'>
+        <h3 className={` text-[#F76902]/80 lg:text-6xl md_1:text-5xl sm:text-3xl text-xl ${mont.className} font-black md_1:my-12 md:my-8 my-6 md_1:mb-10 md:mb-5 sm_1:mb-3 mb-0`}>History Of</h3>
+        <p className=' font-burga lg:text-9xl md_1:text-8xl sm:text-6xl text-4xl text-white md:my-6 sm:my-4 my-2'>ALABAY</p>
+        <p className={` text-[#353535] ${kumbh.className} font-bold lg:text-3xl md_1:text-2xl sm:text-lg text-sm`}>The Central Asian Shepherd Dog, also known as Alabay, has been a guardian of livestock and property for centuries. Originating from Central Asia, these dogs are renowned for their courage, strength, and loyalty.</p>
+        {/* <p className={` md_1:hidden block text-[#353535] ${kumbh.className} font-bold text-lg`}>The Central Asian Shepherd Dog, also known as Alabay, has been a guardian of livestock and property for centuries. <span className=' '> Originating from Central Asia, these dogs are renowned for their courage, strength, and loyalty.</span></p> */}
     </div>
-    <Image src={'/sliderfirstDog.png'} alt='dog' width={700} height={1000} className=' pointer-events-none absolute z-10 left-0 top-[10%] w-1/2 object-contain object-center '/>
-    <div id='HomeSliderGradient' className=' absolute top-0 left-0 z-0 pointer-events-none w-full h-full' style={{clipPath:"polygon(0% 0%, 100% 0%, 100% 100%, 0px 86.5%)"}}/>
+    <Image src={'/sliderfirstDog.png'} alt='dog' width={700} height={1000} className=' pointer-events-none absolute z-10 left-0 sm:top-[10%] top-[15%] md_1:w-1/2 md:w-2/3 sm_1:w-[64%] sm_2:w-3/5 w-[55%] object-contain object-center '/>
+
+    <div className=' md_2:hidden block w-full'>
+{/* CAROUSEL SECTION (MOBILE) */}
+        <Carousel/>
+    </div>
+    <div id='HomeSliderGradient' className=' absolute top-0 left-0 z-0 pointer-events-none w-full h-full'/>
     </section>
-{/* CAROUSEL SECTION */}
-<Carousel/>
+<div className=' w-full md_2:block hidden'>
+    {/* CAROUSEL SECTION */}
+    <Carousel/>
+</div>
 {/* PROJECT VISION */}
 <ProjectVisionSection/>
 {/* ROAD MAP */}

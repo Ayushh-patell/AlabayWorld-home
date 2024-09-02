@@ -7,21 +7,21 @@ const TokenomicsSection = () => {
   return (
     <section className=" w-full bg-white pt-10">
 
-      <div id="tokenomicsGradient" className=" pt-20" style={{clipPath:"polygon(0% 10%, 100% 0%, 100% 100%, 0% 90%)"}}>
-        <h2 className=" text-9xl font-burga p-10">TOKENOMICS</h2>
-        <div className=" flex justify-between items-center gap-2 p-4">
-          <div className={` w-1/2 flex justify-center items-center flex-col gap-7 ${mont.className} font-black text-2xl`}>
-            <div className=" bg-[#353535] rounded-2xl p-5 w-1/2" style={{boxShadow:"10px 10px 15px #A87D29"}}>
+      <div id="tokenomicsGradient" className=" md_2:pt-20">
+        <h2 className=" lg:text-9xl sm:text-8xl sm_1:text-6xl text-4xl font-burga md_2:p-10 md_2:pt-10 pt-0 pb-10 sm_1:px-10 px-4 md_2:text-white text-[#FFA800]">TOKENOMICS</h2>
+        <div className=" flex justify-between items-center gap-2 p-4 md_2:pb-10 lg:pb-4">
+          <div className={` md_2:w-1/2 w-[45%] flex justify-center items-center flex-col gap-7 ${mont.className} font-black lg"text-2xl sm:text-xl sm_1:text-base text-xs`}>
+            <div className="tokenomicsCard bg-[#353535] rounded-2xl md_2:p-5 p-2 md_2:w-1/2 w-full">
                 <p>LIQUIDITY</p>
-                <p className=" text-[#FFF280] text-3xl">LOCKED</p>
+                <p className=" text-[#FFF280] lg:text-3xl sm:text-2xl sm_1:text-lg text-sm">LOCKED</p>
             </div>
-            <div className=" bg-[#353535] rounded-2xl p-5 w-1/2" style={{boxShadow:"10px 10px 15px #A87D29"}}>
+            <div className="tokenomicsCard bg-[#353535] rounded-2xl md_2:p-5 p-2 md_2:w-1/2 w-full">
                 <p>CONTRACT</p>
-                <p className=" text-[#FFF280] text-3xl">RENOUNCED</p>
+                <p className=" text-[#FFF280] lg:text-3xl sm:text-2xl sm_1:text-lg text-sm">RENOUNCED</p>
             </div>
-            <div className=" bg-[#353535] rounded-2xl p-5 w-1/2" style={{boxShadow:"10px 10px 15px #A87D29"}}>
+            <div className="tokenomicsCard bg-[#353535] rounded-2xl md_2:p-5 p-2 md_2:w-1/2 w-full">
                 <p>TAXES</p>
-                <p className=" text-[#FFF280] text-3xl">0%</p>
+                <p className=" text-[#FFF280] lg:text-3xl sm:text-2xl sm_1:text-lg text-sm">0%</p>
             </div>
           </div>
           <Image
@@ -29,7 +29,7 @@ const TokenomicsSection = () => {
             alt="dog"
             width={400}
             height={500}
-            className=" w-[45%] object-contain object-center"
+            className=" md_2:w-[45%] w-[55%] object-contain object-center"
           />
         </div>
       </div>

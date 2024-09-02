@@ -45,29 +45,29 @@ const GamesCarousel = () => {
     },[slide])
 
   return (
-        <div className=' w-full relative z-10 pt-12'>
+        <div className=' w-full relative z-10 md:pt-12 pt-8'>
             {/* <button onClick={slideLeft} disabled={disableLeft} className=' active:scale-90 transition-all duration-300 w-10 flex-shrink-0 p-2 aspect-[3/4] rounded-lg bg-[#353535]' style={{boxShadow:'4px 3px 10px rgba(0,0,0,0.65)'}}><Image src={'/Arrow.svg'} alt='Arrow Left' width={50} height={50} className=' w-fulll rotate-180'/></button> */}
             <div className=' w-full h-full overflow-hidden flex justify-start items-center'>
  
                     {GameSlideData.map((data,i) => (
-                        <div key={i} className=' flex-shrink-0 GameSlide h-full w-full px-20 overflow-hidden flex justify-center items-center'>
-                            <div className=' w-11/12 rounded-2xl h-[90dvh] border-4 border-white overflow-hidden'>
+                        <div key={i} className=' flex-shrink-0 GameSlide h-full w-full xl:px-20 sm:px-12 px-5 overflow-hidden flex justify-center items-center'>
+                            <div className=' xl:w-11/12 w-full rounded-2xl xl:h-[90dvh] lg:h-[85vh] lg:aspect-auto aspect-[16/10] border-4 border-white overflow-hidden'>
                                 <Image src={data.src} alt={data.name} width={600} height={400} className=' w-full h-full object-cover object-center pointer-events-none'/>
                             </div>
                         </div>
                     ))}
-                    <div className=' flex-shrink-0 GameSlide h-full w-full px-20 overflow-hidden flex justify-center items-center'>
-                            <div className=' w-11/12 rounded-2xl h-[90dvh] border-4 border-white overflow-hidden'>
+                    <div className=' flex-shrink-0 GameSlide h-full w-full xl:px-20 px-12 overflow-hidden flex justify-center items-center'>
+                            <div className=' xl:w-11/12 w-full rounded-2xl xl:h-[90dvh] lg:h-[85vh] lg:aspect-auto aspect-[16/10] border-4 border-white overflow-hidden'>
                                 <Image src={GameSlideData[0].src} alt={GameSlideData[0].name} width={600} height={400} className=' w-full h-full object-cover object-center pointer-events-none'/>
                             </div>
                         </div>
 
                     {/* DISCOVER BUTTON */}
-                    <Link href={currentSlide.link}><button className={` active:scale-90 transition-all duration-300 absolute bottom-32 left-1/2 -translate-x-1/2 flex justify-center items-center gap-3 px-7 pr-5 py-2 text-lg font-black text-white rounded-full ${mont.className}`} style={{backgroundColor:`${currentSlide.color}`, boxShadow:"5px 5px 5px rgba(0,0,0,0.5)"}}>DISCOVER <Image src={'/Thin Arrow.png'} alt='arrow' width={23} height={20} className=' object-contain object-center'/></button></Link>
+                    <Link href={currentSlide.link}><button className={` active:scale-90 transition-all duration-300 absolute lg:bottom-32 sm:bottom-20 bottom-10 left-1/2 -translate-x-1/2 flex justify-center items-center gap-3 sm:px-7 px-4 sm:pr-5 pr-2 py-2 sm:text-lg text-sm font-black text-white rounded-full ${mont.className}`} style={{backgroundColor:`${currentSlide.color}`, boxShadow:"5px 5px 5px rgba(0,0,0,0.5)"}}>DISCOVER <Image src={'/Thin Arrow.png'} alt='arrow' width={23} height={20} className=' object-contain object-center'/></button></Link>
 
 
             </div>
-            <button onClick={slideRight} disabled={disableRight} className=' active:scale-90 transition-all duration-300 w-10 flex-shrink-0 p-2 aspect-[3/4] rounded-lg bg-[#353535] absolute top-1/2 -translate-y-1/2 right-[12%]' style={{boxShadow:'4px 3px 10px rgba(0,0,0,0.65)'}}><Image src={'/Arrow.svg'} alt='Arrow Right' width={50} height={50} className=' w-ful'/></button>
+            <button onClick={slideRight} disabled={disableRight} className=' active:scale-90 transition-all duration-300 w-10 flex-shrink-0 p-2 aspect-[3/4] rounded-lg bg-[#353535] absolute top-1/2 -translate-y-1/2 sm:right-[12%] right-7' style={{boxShadow:'4px 3px 10px rgba(0,0,0,0.65)'}}><Image src={'/Arrow.svg'} alt='Arrow Right' width={50} height={50} className=' w-ful'/></button>
         </div>
   )
 }
