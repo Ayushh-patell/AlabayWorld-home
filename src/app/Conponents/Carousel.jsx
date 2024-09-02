@@ -101,7 +101,7 @@ const Carousel = () => {
         </div>
         {/* CAROUSEL */}
         <div className=' w-full flex justify-center items-center sm:gap-7 gap-3 md:px-0 px-3'>
-            <button onClick={slideLeft} disabled={disableLeft} className=' active:scale-90 transition-all duration-300 sm:w-10 w-8 flex-shrink-0 p-2 aspect-[3/4] rounded-lg bg-[#353535]' style={{boxShadow:'4px 3px 10px rgba(0,0,0,0.65)'}}><Image src={'/Arrow.svg'} alt='Arrow Left' width={50} height={50} className=' w-fulll rotate-180'/></button>
+            <button onClick={slideLeft} disabled={disableLeft} className=' active:scale-90 transition-all duration-300 sm:w-10 w-6 flex-shrink-0 sm:p-2 p-1 aspect-[3/4] rounded-lg bg-[#353535]' style={{boxShadow:'4px 3px 10px rgba(0,0,0,0.65)'}}><Image src={'/Arrow.svg'} alt='Arrow Left' width={50} height={50} className=' w-fulll rotate-180'/></button>
             <div className=' sm:w-[80%] w-[90%] md:h-48 sm:h-28 sm_2:h-20 h-14 overflow-hidden'>
 
             <div className=" w-full h-full overflow-hidden flex justify-start items-center relative">
@@ -114,7 +114,7 @@ const Carousel = () => {
                 ))}
             </div>
             </div>
-            <button onClick={slideRight} disabled={disableRight} className=' active:scale-90 transition-all duration-300 sm:w-10 w-8 flex-shrink-0 p-2 aspect-[3/4] rounded-lg bg-[#353535]' style={{boxShadow:'4px 3px 10px rgba(0,0,0,0.65)'}}><Image src={'/Arrow.svg'} alt='Arrow Right' width={50} height={50} className=' w-full'/></button>
+            <button onClick={slideRight} disabled={disableRight} className=' active:scale-90 transition-all duration-300 sm:w-10 w-6 flex-shrink-0 sm:p-2 p-1 aspect-[3/4] rounded-lg bg-[#353535]' style={{boxShadow:'4px 3px 10px rgba(0,0,0,0.65)'}}><Image src={'/Arrow.svg'} alt='Arrow Right' width={50} height={50} className=' w-full'/></button>
         </div>
     </section>
   )
