@@ -17,8 +17,8 @@ const ScrollBar = ({gameName}) => {
             gsap.to("#Heading", {top:"-40px", duration:0.5,});
             gsap.to("#SubHeading", {top:"-40px", duration:0.5,});
             
-            gsap.set("#BeforeScroll", {pointerEvents:"none"});
-            gsap.to("#BeforeScroll", {top:"-20px", duration:0.2, opacity:0});
+            gsap.set(".BeforeScroll", {pointerEvents:"none"});
+            gsap.to(".BeforeScroll", {top:"-20px", duration:0.2, opacity:0});
             
         }
         else { 
@@ -28,8 +28,8 @@ const ScrollBar = ({gameName}) => {
             gsap.to("#Heading", {top:"0px", duration:0.5,});
             gsap.to("#SubHeading", {top:"0px", duration:0.5,});
 
-            gsap.set("#BeforeScroll", {pointerEvents:"all"});
-            gsap.to("#BeforeScroll", {top:"0px", duration:0.2, delay:0.4, opacity:1});
+            gsap.set(".BeforeScroll", {pointerEvents:"all"});
+            gsap.to(".BeforeScroll", {top:"0px", duration:0.2, delay:0.4, opacity:1});
         }
     },[scrolled])
 
@@ -62,6 +62,11 @@ const ScrollBar = ({gameName}) => {
         window.addEventListener('wheel', wheelHandler)
         window.addEventListener('touchstart', handleTouchStart);
         window.addEventListener('touchend', handleTouchEnd);
+        if(window.innerWidth<640) {
+            window.removeEventListener('wheel', wheelHandler);
+            window.removeEventListener('touchstart', handleTouchStart);
+            window.removeEventListener('wheel', handleTouchEnd);
+        }
 
         return () => {
             window.removeEventListener('wheel', wheelHandler);

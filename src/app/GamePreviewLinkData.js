@@ -4,6 +4,7 @@ export const GamePreviewLinkData = {
         subname:"THE LOST ADVENTURE",
         desc:"Take on the role of the legendary Alabay on a quest to uncover the ancient secrets of its ancestors.",
         src:"/Alabay heritage prev gradient.png",
+        mobileSrc:'/GameCarousel-alabay lost heritage.png',
         primaryClr:"#90FFAE",
         previewImgs:["/Alabay Adventure - The Lost Heritage/overview.png","/Alabay Adventure - The Lost Heritage/artifacts.png", "/Alabay Adventure - The Lost Heritage/Abilities.png", "/Alabay Adventure - The Lost Heritage/locations preview.png"],
         featuresHtml:`
@@ -23,6 +24,7 @@ export const GamePreviewLinkData = {
         subname:"SHEPHERD OF THE STEPPES",
         desc:"Take on the role of the legendary Alabay on a quest to uncover the ancient secrets of its ancestors. ",
         src:"/Alabay Guard prev gradient.png",
+        mobileSrc:'/GameCarousel-alabay guard.png',
         primaryClr:"#A4A8FF",
         previewImgs:["/Alabay Guard/image 1 alabay guard.png", "/Alabay Guard/image 2 alabay guard.png", "/Alabay Guard/image 3 alabay guard.png"],
         featuresHtml:`

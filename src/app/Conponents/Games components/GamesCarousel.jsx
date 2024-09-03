@@ -39,7 +39,7 @@ const GamesCarousel = () => {
         clearInterval(autoplay);
         autoplay = setInterval(() => {            
             slideRight();
-        }, 4000);
+        }, 5000);
 
         return () => clearInterval(autoplay);
     },[slide])
@@ -56,7 +56,7 @@ const GamesCarousel = () => {
                             </div>
                         </div>
                     ))}
-                    <div className=' flex-shrink-0 GameSlide h-full w-full xl:px-20 px-12 overflow-hidden flex justify-center items-center'>
+                    <div className=' flex-shrink-0 GameSlide h-full w-full xl:px-20 sm:px-12 px-5 overflow-hidden flex justify-center items-center'>
                             <div className=' xl:w-11/12 w-full rounded-2xl xl:h-[90dvh] lg:h-[85vh] lg:aspect-auto aspect-[16/10] border-4 border-white overflow-hidden'>
                                 <Image src={GameSlideData[0].src} alt={GameSlideData[0].name} width={600} height={400} className=' w-full h-full object-cover object-center pointer-events-none'/>
                             </div>

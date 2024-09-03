@@ -16,7 +16,7 @@ const SocialMediaLinksSection = () => {
     <div className=' w-1/2 lg:p-20 p-4 pr-0'>
         <div className=' w-full relative'>
             <Image src={'/ChatBubble.svg'} alt='chat bubble' width={200} height={150} className=' relative z-0 w-full object-contain object-center'/>
-            <div className=' absolute z-10 top-0 left-0 w-full h-full md_2:p-5 sm_0_1:p-3 p-1 flex justify-center items-start flex-col md_2:gap-8 sm_1:gap-4 gap-2'>
+            <div className=' absolute z-10 top-0 left-0 w-full h-full md_2:p-5 sm_0_1:p-3 p-2 flex justify-center items-start flex-col md_2:gap-8 sm_1:gap-4 gap-2'>
             
                 <div className=' flex justify-start items-center md:gap-5 gap-2 lg:px-10 md:px-4 sm_0_1:px-2 px-0'>
                 <div className=' rounded-full md:p-3 sm_0_1:p-2 p-1 bg-[#353535]'>

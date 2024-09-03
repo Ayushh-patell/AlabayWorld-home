@@ -80,6 +80,20 @@ color: white;
   background: #fff280;
   background: radial-gradient(circle at 50% 40%, #fff280 0%, #ffc700 40%);
 }
+#mobileFeatureDiv p {
+ position: relative;
+}
+#mobileFeatureDiv p::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -15px;
+  border-radius: 50%;
+  transform: translateY(-50%);
+  width: 6px;
+  height: 6px;
+  background-color: var(--primaryClr);
+}
 
  /* FFC700 */
 @layer utilities {
