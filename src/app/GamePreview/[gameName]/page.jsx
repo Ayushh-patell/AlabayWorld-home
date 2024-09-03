@@ -70,7 +70,7 @@ const Page = ({params}) => {
         <h2 id='SubHeading' className={`${bebas.className} relative text-lg tracking-[0.2em] mb-2`} style={{color:`${GamePreviewLinkData[params.gameName].primaryClr}`}}>{GamePreviewLinkData[params.gameName].subname}</h2>
 
         <div className=' w-full bg-[#22212A]'>
-        <p className={`${mont.className} font-bold text-sm p-2 px-4`} style={{color:`${GamePreviewLinkData[params.gameName].primaryClr}`}}>"{GamePreviewLinkData[params.gameName].desc}"</p>
+        <p className={`${mont.className} font-bold text-sm p-2 px-4`} style={{color:`${GamePreviewLinkData[params.gameName].primaryClr}`}}>&quot;{GamePreviewLinkData[params.gameName].desc}&quot;</p>
         </div>
 
         <div className=' w-full p-2 text-left'>

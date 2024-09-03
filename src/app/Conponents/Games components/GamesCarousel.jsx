@@ -63,7 +63,7 @@ const GamesCarousel = () => {
                         </div>
 
                     {/* DISCOVER BUTTON */}
-                    <Link href={currentSlide.link}><button className={` active:scale-90 transition-all duration-300 absolute lg:bottom-32 sm:bottom-20 bottom-10 left-1/2 -translate-x-1/2 flex justify-center items-center gap-3 sm:px-7 px-4 sm:pr-5 pr-2 py-2 sm:text-lg text-sm font-black text-white rounded-full ${mont.className}`} style={{backgroundColor:`${currentSlide.color}`, boxShadow:"5px 5px 5px rgba(0,0,0,0.5)"}}>DISCOVER <Image src={'/Thin Arrow.png'} alt='arrow' width={23} height={20} className=' object-contain object-center'/></button></Link>
+                    <Link href={currentSlide.link}><button className={` active:scale-90 transition-all duration-300 absolute lg:bottom-32 sm:bottom-20 bottom-10 left-1/2 -translate-x-1/2 flex justify-center items-center gap-3 sm:px-7 px-4 sm:pr-5 pr-2 py-2 sm:text-lg text-xs font-black text-white rounded-full ${mont.className}`} style={{backgroundColor:`${currentSlide.color}`, boxShadow:"5px 5px 5px rgba(0,0,0,0.5)"}}>DISCOVER <Image src={'/Thin Arrow.png'} alt='arrow' width={22} height={20} className=' object-contain object-center'/></button></Link>
 
 
             </div>
