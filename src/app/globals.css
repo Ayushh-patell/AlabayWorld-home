@@ -47,6 +47,9 @@ color: white;
 .tokenomicsCard {
   box-shadow: 10px 10px 15px #A87D29;
 }
+.roadmapGrid {
+  mask-image: linear-gradient(180deg, black 40%, transparent 94%);
+}
 
 #HomeSliderGradient {
   clip-path:polygon(0% 0%, 100% 0%, 100% 100%, 0px 86.5%);
@@ -115,6 +118,9 @@ color: white;
   }
   .tokenomicsCard {
     box-shadow: 10px 10px 15px #717171;
+  }
+  .roadmapGrid {
+    mask-image: linear-gradient(180deg, black 40%, transparent 90%);
   }
 }
 

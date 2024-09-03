@@ -23,7 +23,7 @@ const RoadMapSection = () => {
         <Image src={'/Road Map.png'} alt='Dog' width={500} height={600} className=' sm:w-[45%] sm_1:w-[55%] w-[60%] absolute md_1:right-10 sm:right-8 right-0 md_2:bottom-0 sm:bottom-[20%] bottom-0 object-contain object-center'/>
       </div>
     {/* ROADMAP GRID */}
-      <div className={` relative z-10 grid lg:px-24 md_2:px-20 sm:px-10 px-4 py-5 grid-cols-4 md_2:gap-5 gap-2 overflow-hidden md_2:bg-white ${mont.className} font-black md_2:text-2xl md:text-xl sm:text-base sm_2:text-xs text-[10px] text-center`} style={{maskImage:"linear-gradient(180deg, black 40%, transparent 94%)"}}>
+      <div className={`roadmapGrid relative z-10 grid lg:px-24 md_2:px-20 sm:px-10 px-4 py-5 grid-cols-4 md_2:gap-5 gap-2 overflow-hidden md_2:bg-white ${mont.className} font-black md_2:text-2xl md:text-xl sm:text-base sm_2:text-xs text-[10px] text-center`}>
         <div className=' md_2:bg-[#DBC70C] bg-[#01E33E] rounded-ss-3xl flex-col flex justify-between items-center'>
         <div className=' md:px-5 px-3 md:pt-5 pt-3'>
             <p>Community Building</p>
