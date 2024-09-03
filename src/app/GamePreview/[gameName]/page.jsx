@@ -60,7 +60,7 @@ const Page = ({params}) => {
 
         <button className=' absolute z-10 left-1/2 -translate-x-1/2 bottom-5 active:scale-90 transition-all duration-200 pl-2 px-4 py-2 flex justify-between items-center gap-2 rounded-full' style={{backgroundColor:`${GamePreviewLinkData[params.gameName].primaryClr}`}}>
               <Image src={'/play.png'} alt='play' width={20} height={20} className=' object-contain object-center' />
-              <p className=' font-hel-normal font-bold text-xs text-[#201E26]'>PLAY</p>
+              <p className=' font-hel-normal font-bold text-xs h-3 text-[#201E26]'>PLAY</p>
             </button>
         </div>
 
