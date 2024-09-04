@@ -83,6 +83,7 @@ color: white;
   background: #fff280;
   background: radial-gradient(circle at 50% 40%, #fff280 0%, #ffc700 40%);
 }
+
 #mobileFeatureDiv p {
  position: relative;
 }
@@ -106,8 +107,8 @@ color: white;
 }
 @media screen and (max-width:900px) {
   #HomeSliderGradient {
-    clip-path:polygon(0% 0%, 100% 0%, 100% 100%, 0px 93%);
-    background: radial-gradient( circle at 50% 30%, #fff280 0%, #ffc700 60%);
+    clip-path:polygon(0% 0%, 100% 0%, 100% 100%, 0px 90%);
+    background: radial-gradient( circle at 50% 30%, #fff280 0%, #ffc700 65%);
   }
   #tokenomicsGradient {
     clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
@@ -121,6 +122,14 @@ color: white;
   }
   .roadmapGrid {
     mask-image: linear-gradient(180deg, black 60%, transparent 90%);
+  }
+  #mobileMerchGradient {
+    background: #fff280;
+    background: radial-gradient(circle at 50% 40%, #fff280 0%, #ffc700 60%);
+  }
+  #mobileSocialGradient {
+    background: #fff280;
+    background: radial-gradient(circle at 50% 65%, #fff280 0%, #ffc700 60%);
   }
 }
 

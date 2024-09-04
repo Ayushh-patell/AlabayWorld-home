@@ -8,7 +8,7 @@ const SocialMediaLinksSection = () => {
   return (
     <div className=' w-full md_2:p-5 p-2 pb-16 pt-10  bg-white relative'>
 
-    <div className=' md_2:hidden block absolute top-0 left-0 w-full h-full bg-[#ffc700]' style={{clipPath:"polygon(0% 15%, 100% 0%, 100% 100%, 0% 100%)"}}></div>
+    <div id='mobileSocialGradient' className=' md_2:hidden block absolute top-0 left-0 w-full h-full ' style={{clipPath:"polygon(0% 15%, 100% 0%, 100% 100%, 0% 100%)"}}></div>
 
         <h2 className=' lg:text-9xl md_2:text-7xl sm_1:text-5xl text-4xl font-burga md_2:text-[#FFA800] text-white lg:pt-20 pt-14 lg:pb-28 md_2:pb-20 pb-8 sm_1:px-10 px-4 relative z-10'>SOCIAL MEDIA <br /> LINKS</h2>
     <div className=' w-full flex justify-between items-end  sm:gap-5 gap-0'>

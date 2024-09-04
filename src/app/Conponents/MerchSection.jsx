@@ -5,15 +5,19 @@ import React from 'react'
 const mont = Montserrat({subsets:['cyrillic'], adjustFontFallback:false})
 const MerchSection = () => {
   return (
-    <section className=' w-full pt-10 bg-white relative'>
-          <div aria-hidden className=' md_2:hidden block sm:h-24 h-16 w-full bg-[#ffc700] pointer-events-none' style={{clipPath:"polygon(100% 0%, 100% 0%, 100% 100%, 0% 100%)"}}/>
+    <section className=' w-full py-16 bg-white relative'>
+          {/* <div aria-hidden className=' md_2:hidden block sm:h-24 h-16 w-full bg-[#ffc700] pointer-events-none' style={{clipPath:"polygon(100% 0%, 100% 0%, 100% 100%, 0% 100%)"}}/> */}
 
-      <h2 className=' md_2:text-9xl sm:text-7xl sm_1:text-5xl text-4xl font-burga md_2:text-[#353535] text-white md_2:mb-5 md_2:pb-0 sm_1:pb-5 pb-0 text-center md_2:bg-transparent bg-[#ffc700]'>MERCH STORE</h2>
-      <p className={` ${mont.className} md_2:text-[#ffc700] text-[#353535] md_2:text-2xl sm:text-lg sm_1:text-sm text-[10px] font-black text-center md_2:bg-transparent bg-[#ffc700]`}>Tshirts, Hoodies, Coffee-Mugs, Caps and many more !</p>
+<div id='mobileMerchGradient' className=' absolute top-0 left-0 w-full h-full z-0' style={{clipPath:"polygon(0% 15%, 100% 0%, 100% 100%, 0% 85%)"}}></div>
+      <h2 className=' md_2:text-9xl sm:text-7xl sm_1:text-5xl text-4xl font-burga md_2:text-[#353535] text-white md_2:mb-5 md_2:pb-0 sm_1:pb-5 pb-0 text-center md_2:bg-transparent relative z-10 '>MERCH STORE</h2>
+      <p className={` ${mont.className} md_2:text-[#ffc700] text-[#353535] md_2:text-2xl sm:text-lg sm_1:text-sm text-[10px] font-black text-center md_2:bg-transparent relative z-10 `}>Tshirts, Hoodies, Coffee-Mugs, Caps and many more !</p>
 
       {/* MERCH CAROUSEL */}
-      <div className=' w-full sm_1:p-8 p-4 md:px-16 sm_1:px-8 px-4  flex justify-start items-center relative overflow-hidden z-10 md_2:bg-transparent bg-[#ffc700]'>
-      <div className=' flex-shrink-0 w-full px-1 flex justify-center items-center -translate-x-full'>
+      <div className=' w-full sm_1:p-8 p-4 md:px-16 sm_1:px-8 px-4  flex justify-start items-center relative overflow-hidden z-0 md_2:bg-transparent'>
+
+
+      
+      <div className=' flex-shrink-0 w-full px-1 flex justify-center items-center -translate-x-full relative'>
 
         <div className=' w-full xl:h-[350px] lg:h-[320px] md_2:h-[260px] sm:h-[230px] sm_0_1:h-[170px] sm_2:h-[140px] h-[120px] rounded-3xl bg-[#E1F8DC] md:pl-16 sm_1:pl-8 pl-4 flex justify-between items-center gap-3'>
           <div className=' sm_2:w-1/3 w-[30%] h-full flex flex-col justify-center items-start'>
@@ -29,7 +33,7 @@ const MerchSection = () => {
 
         </div>
       </div>
-        <div className=' flex-shrink-0 w-full px-1 flex justify-center items-center -translate-x-full'>
+        <div className=' flex-shrink-0 w-full px-1 flex justify-center items-center -translate-x-full relative'>
 
         <div className=' w-full xl:h-[350px] lg:h-[320px] md_2:h-[260px] sm:h-[230px] sm_0_1:h-[170px] sm_2:h-[140px] h-[120px] rounded-3xl md_2:bg-[#FFEE88DD]/85 bg-[#AD6EFF] md:pl-16 sm_1:pl-8 pl-4 flex justify-between items-center gap-3'>
           <div className=' sm_2:w-1/3 w-[30%] h-full flex flex-col justify-center items-start'>
@@ -45,7 +49,7 @@ const MerchSection = () => {
 
         </div>
         </div>
-        <div className=' flex-shrink-0 w-full px-1 flex justify-center items-center -translate-x-full'>
+        <div className=' flex-shrink-0 w-full px-1 flex justify-center items-center -translate-x-full relative'>
 
         <div className=' w-full xl:h-[350px] lg:h-[320px] md_2:h-[260px] sm:h-[230px] sm_0_1:h-[170px] sm_2:h-[140px] h-[120px] rounded-3xl bg-[#F7D8BA] md:pl-16 sm_1:pl-8 pl-4 flex justify-between items-center gap-3'>
           <div className=' sm_2:w-1/3 w-[30%] h-full flex flex-col justify-center items-start'>
@@ -61,7 +65,7 @@ const MerchSection = () => {
 
         </div>
         </div>
-        <div className=' flex-shrink-0 w-full px-1 flex justify-center items-center -translate-x-full'>
+        <div className=' flex-shrink-0 w-full px-1 flex justify-center items-center -translate-x-full relative'>
 
         <div className=' w-full xl:h-[350px] lg:h-[320px] md_2:h-[260px] sm:h-[230px] sm_0_1:h-[170px] sm_2:h-[140px] h-[120px] rounded-3xl bg-[#FFEE88DD]/85 md:pl-sm_1:16 pl pl-4-8 flex justify-between items-center gap-3'>
           <div className=' sm_2:w-1/3 w-[30%] h-full flex flex-col justify-center items-start'>
@@ -87,7 +91,7 @@ const MerchSection = () => {
       </div>
 
 
-      <div className=' w-full sm:px-20 px-10 py-5 grid grid-cols-4 md_2:gap-2 sm:gap-7 gap-5 relative z-10 md_2:bg-transparent bg-[#ffc700]'>
+      <div className=' w-full sm:px-20 px-10 py-5 grid grid-cols-4 md_2:gap-2 sm:gap-7 gap-5 relative z-0 md_2:bg-transparent '>
         <div className=' aspect-square sm:rounded-3xl rounded-xl bg-[#7BE698] flex justify-center items-center sm:p-5 p-2 sm:ring-8 ring-4 ring-white'>
             <Image src={'/tshirt 1.png'} alt='tshirt' width={200} height={200} className=' w-full h-full object-contain object-center'/>
         </div>
@@ -112,7 +116,7 @@ const MerchSection = () => {
       <div className=' bg-[#ffc700] h-24 w-full'></div>
       </div>
 
-      <div aria-hidden className=' md_2:hidden block sm:h-24 h-16 w-full bg-[#ffc700] pointer-events-none' style={{clipPath:"polygon(0% 0%, 100% 0%, 100% 100%, 0% 0%)"}}/>
+      {/* <div aria-hidden className=' md_2:hidden block sm:h-24 h-16 w-full bg-[#ffc700] pointer-events-none' style={{clipPath:"polygon(0% 0%, 100% 0%, 100% 100%, 0% 0%)"}}/> */}
 
         
 

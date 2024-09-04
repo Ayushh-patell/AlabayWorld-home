@@ -56,7 +56,7 @@ const RoadMapSection = () => {
 
       <div className=' absolute z-0 sm:bottom-24 bottom-16 left-0 w-full sm:h-[300px] sm_1:h-[250px] h-[200px] md_2:hidden block bg-[#ffc700]' aria-hidden></div>
 
-      <div aria-hidden className=' md_2:hidden block sm:h-24 h-16 w-full bg-[#ffc700] pointer-events-none -translate-y-[1px]' style={{clipPath:"polygon(0% 0%, 100% 0%, 100% 100%, 0% 0%)"}}/>
+      <div aria-hidden className=' md_2:hidden block sm:h-24 h-16 w-full bg-[#ffc700] pointer-events-none -translate-y-[1px]' style={{clipPath:"polygon(0% 0%, 100% 0%, 100% 100%, -10% 0%)"}}/>
 
 
     </section>
