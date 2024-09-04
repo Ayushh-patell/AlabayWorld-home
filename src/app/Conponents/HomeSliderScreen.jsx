@@ -130,7 +130,7 @@ const HomeSliderScreen = () => {
     },[swipe]) 
 
   return (
-    <main id='HomeSlider' className=' size-11/12 fixed z-50 rounded-xl md:bottom-[-85%] bottom-[-88%] left-1/2 -translate-x-1/2 overflow-hidden bg-gradient-to-b from-[#ffc700] to-white to-85%'>
+    <main id='HomeSlider' className=' size-11/12 fixed z-50 rounded-xl md:bottom-[-85%] bottom-[-88%] left-1/2 -translate-x-1/2 overflow-hidden bg-white'>
     <div id='SliderContentHideBar' className=' bg-[#ffc700] sm:py-4 py-3 flex justify-center items-center sticky top-0 left-0 w-full pointer-events-none z-50'>
         <button onClick={OpeningORClosingSlider} className=' rounded-full sm:bg-[#FFF6A1] bg-[#353535] sm:w-32 w-20 sm:h-3 h-2'></button>
     </div>

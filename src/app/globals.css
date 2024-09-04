@@ -64,7 +64,7 @@ color: white;
   position: relative;
   clip-path: polygon(0% 10%, 100% 0%, 100% 100%, 0% 90%);
   background: #fff280;
-  background: radial-gradient(circle at 50% 30%, #fff280 0%, #ffc700 30%);
+  background: radial-gradient(circle at 50% 50%, #fff280 0%, #ffc700 30%);
 }
 #gamesGradient {
   background: #fff280;
@@ -79,10 +79,7 @@ color: white;
   height: 2px;
   background-color: #ffc700;
 }
-#roadMapMobileGradient {
-  background: #fff280;
-  background: radial-gradient(circle at 50% 40%, #fff280 0%, #ffc700 40%);
-}
+
 
 #mobileFeatureDiv p {
  position: relative;
@@ -130,6 +127,11 @@ color: white;
   #mobileSocialGradient {
     background: #fff280;
     background: radial-gradient(circle at 50% 65%, #fff280 0%, #ffc700 60%);
+  }
+  #roadMapMobileGradient {
+    clip-path: polygon(0% 10%, 100% 0%, 100% 100%, 0% 90%);
+    background: #fff280;
+    background: radial-gradient(circle at 50% 40%, #fff280 0%, #ffc700 40%);
   }
 }
 

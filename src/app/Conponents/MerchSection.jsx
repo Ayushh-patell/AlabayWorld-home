@@ -5,7 +5,7 @@ import React from 'react'
 const mont = Montserrat({subsets:['cyrillic'], adjustFontFallback:false})
 const MerchSection = () => {
   return (
-    <section className=' w-full py-16 bg-white relative'>
+    <section className=' w-full sm:py-10 py-24 bg-white relative'>
           {/* <div aria-hidden className=' md_2:hidden block sm:h-24 h-16 w-full bg-[#ffc700] pointer-events-none' style={{clipPath:"polygon(100% 0%, 100% 0%, 100% 100%, 0% 100%)"}}/> */}
 
 <div id='mobileMerchGradient' className=' absolute top-0 left-0 w-full h-full z-0' style={{clipPath:"polygon(0% 15%, 100% 0%, 100% 100%, 0% 85%)"}}></div>
@@ -91,7 +91,7 @@ const MerchSection = () => {
       </div>
 
 
-      <div className=' w-full sm:px-20 px-10 py-5 grid grid-cols-4 md_2:gap-2 sm:gap-7 gap-5 relative z-0 md_2:bg-transparent '>
+      <div className=' w-full sm:px-20 px-10 py-5 grid grid-cols-4 md_2:gap-2 sm:gap-7 gap-5 relative z-10 md_2:bg-transparent '>
         <div className=' aspect-square sm:rounded-3xl rounded-xl bg-[#7BE698] flex justify-center items-center sm:p-5 p-2 sm:ring-8 ring-4 ring-white'>
             <Image src={'/tshirt 1.png'} alt='tshirt' width={200} height={200} className=' w-full h-full object-contain object-center'/>
         </div>

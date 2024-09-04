@@ -7,13 +7,13 @@ const mont = Montserrat({subsets:['cyrillic'], adjustFontFallback:false})
 
 const RoadMapSection = () => {
   return (
-    <section className=' w-full bg-white relative'>
-      <div aria-hidden className=' md_2:hidden block sm:h-24 h-16 w-full bg-[#ffc700] pointer-events-none' style={{clipPath:"polygon(100% 0%, 100% 0%, 100% 100%, 0% 100%)"}}/>
+    <section id='roadMapMobileGradient' className=' w-full md_2:bg-white bg-[#ffc700] relative md_2:pt-0 md_2:pb-0 pt-10 pb-16'>
+      {/* <div aria-hidden className=' md_2:hidden block sm:h-24 h-16 w-full bg-[#ffc700] pointer-events-none' style={{clipPath:"polygon(100% 0%, 100% 0%, 100% 100%, 0% 100%)"}}/> */}
 
-    <h2 className=' lg:text-9xl md_1:text-8xl sm_1:text-7xl text-4xl text-white font-burga text-left sm:px-14 sm_1:px-8 px-4 pt-10 sm:pb-20 pb-8 bg-[#ffc700] relative z-10'>ROAD MAP</h2>
+    <h2 className=' lg:text-9xl md_1:text-8xl sm_1:text-7xl text-4xl text-white font-burga text-left sm:px-14 sm_1:px-8 px-4 pt-10 sm:pb-20 pb-8 relative z-10 md_2:bg-[#ffc700]'>ROAD MAP</h2>
       <div aria-hidden className=' md_2:block hidden h-24 w-full bg-[#ffc700] pointer-events-none' style={{clipPath:"polygon(0% 0%, 100% 0%, 100% 100%, 0% 0%)"}}/>
 
-      <div id='roadMapMobileGradient' className=' absolute z-0 w-full h-[60%] top-1/2 -translate-y-1/2 left-0 md_2:hidden block'/>
+      {/* <div id='roadMapMobileGradient' className=' absolute z-0 w-full h-[60%] top-1/2 -translate-y-1/2 left-0 md_2:hidden block'/> */}
 
       <div className=' w-full md_2:h-[500px] md_1:h-[400px] sm:h-[350px] sm_1:h-[300px] h-[200px] md_2:bg-white relative z-10'>
         <div className={` sm:w-1/2 sm_1:w-[45%] w-[39%] absolute md_1:left-10 sm:left-8 left-4 top-0 ${kumbh.className} font-bold md_2:text-4xl sm:text-2xl sm_1:text-lg text-xs text-[#353535]`}>
@@ -54,9 +54,9 @@ const RoadMapSection = () => {
         </div>
       </div>
 
-      <div className=' absolute z-0 sm:bottom-24 bottom-16 left-0 w-full sm:h-[300px] sm_1:h-[250px] h-[200px] md_2:hidden block bg-[#ffc700]' aria-hidden></div>
+      {/* <div className=' absolute z-0 sm:bottom-24 bottom-16 left-0 w-full sm:h-[300px] sm_1:h-[250px] h-[200px] md_2:hidden block bg-[#ffc700]' aria-hidden></div> */}
 
-      <div aria-hidden className=' md_2:hidden block sm:h-24 h-16 w-full bg-[#ffc700] pointer-events-none -translate-y-[1px]' style={{clipPath:"polygon(0% 0%, 100% 0%, 100% 100%, -10% 0%)"}}/>
+      {/* <div aria-hidden className=' md_2:hidden block sm:h-24 h-16 w-full bg-[#ffc700] pointer-events-none -translate-y-[1px]' style={{clipPath:"polygon(0% 0%, 100% 0%, 100% 100%, -10% 0%)"}}/> */}
 
 
     </section>
