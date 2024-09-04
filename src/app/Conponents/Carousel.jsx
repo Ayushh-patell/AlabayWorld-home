@@ -92,9 +92,9 @@ const Carousel = () => {
   
 
   return (
-    <section className=' md_2:bg-white w-full md_2:pb-10 md_1:pt-10 pt-20 pb-20  relative z-10'>
+    <section className=' md_2:bg-white w-full md_2:pb-10 md_1:pt-10 pt-5  relative z-10'>
     {/* TOP BAR TO SWITCH */}
-        <div className={` w-full flex justify-center items-center sm:gap-7 gap-5 ${mont.className} font-black sm:text-base text-sm text-[#353535] sm:mb-7 mb-3`}>
+        <div className={` w-full flex justify-center items-center sm:gap-7 gap-5 ${mont.className} font-black sm:text-base text-[10px] text-[#353535] sm:mb-7 mb-3`}>
             <button onClick={() => {setactive("ALL")}} className={`${active==="ALL" && " md_2:text-[#FFA800] text-white"}`}>ALL</button>
             <button onClick={() => {setactive("PHOTOS")}} className={`${active==="PHOTOS" && " md_2:text-[#FFA800] text-white"}`}>PHOTOS</button>
             <button onClick={() => {setactive("VIDEOS")}} className={`${active==="VIDEOS" && " md_2:text-[#FFA800] text-white"}`}>VIDEOS</button>

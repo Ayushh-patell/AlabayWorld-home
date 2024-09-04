@@ -120,7 +120,7 @@ color: white;
     box-shadow: 10px 10px 15px #717171;
   }
   .roadmapGrid {
-    mask-image: linear-gradient(180deg, black 40%, transparent 90%);
+    mask-image: linear-gradient(180deg, black 60%, transparent 90%);
   }
 }
 

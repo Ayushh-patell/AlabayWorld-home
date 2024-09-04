@@ -23,32 +23,32 @@ const RoadMapSection = () => {
         <Image src={'/Road Map.png'} alt='Dog' width={500} height={600} className=' sm:w-[45%] sm_1:w-[55%] w-[60%] absolute md_1:right-10 sm:right-8 right-0 md_2:bottom-0 sm:bottom-[20%] bottom-0 object-contain object-center'/>
       </div>
     {/* ROADMAP GRID */}
-      <div className={`roadmapGrid relative z-10 grid lg:px-24 md_2:px-20 sm:px-10 px-4 py-5 grid-cols-4 md_2:gap-5 gap-2 overflow-hidden md_2:bg-white ${mont.className} font-black md_2:text-2xl md:text-xl sm:text-base sm_2:text-xs text-[10px] text-center`}>
+      <div className={`roadmapGrid relative z-10 grid lg:px-24 md_2:px-20 sm:px-10 sm_1:px-4 px-2 py-5 grid-cols-4 md_2:gap-5 sm_1:gap-2 gap-1 overflow-hidden md_2:bg-white ${mont.className} font-black md_2:text-2xl md:text-xl sm:text-base sm_2:text-[11px] text-[9px] text-center`}>
         <div className=' md_2:bg-[#DBC70C] bg-[#01E33E] rounded-ss-3xl flex-col flex justify-between items-center'>
         <div className=' md:px-5 px-3 md:pt-5 pt-3'>
             <p>Community Building</p>
-            <p className=' md_2:text-xl md:text-base sm:text-sm text-[9px]'>and Initial Launch</p>
+            <p className=' md_2:text-xl md:text-base sm:text-sm sm_1:text-[9px] text-[8px]'>and Initial Launch</p>
         </div>
             <Image src={'/roadmap 1.png'} alt='dog' width={300} height={400} className=' w-full object-contain object-center'/>
         </div>
         <div className=' md_2:bg-[#00D4D4] bg-[#3C7EFF] flex flex-col justify-between items-center'>
         <div className=' md:px-5 px-3 md:pt-5 pt-3'>
             <p>Merchandise</p>
-            <p className=' md_2:text-xl md:text-base sm:text-sm text-[9px]'>Store Launch</p>
+            <p className=' md_2:text-xl md:text-base sm:text-sm sm_1:text-[9px] text-[8px]'>Store Launch</p>
         </div>
             <Image src={'/roadmap 2.png'} alt='dog' width={300} height={400} className=' w-full object-contain object-center'/>
         </div>
         <div className=' bg-[#D427FF] flex flex-col justify-between items-center'>
         <div className=' md:px-5 px-3 md:pt-5 pt-3'>
             <p>Community Events</p>
-            <p className=' md_2:text-xl md:text-base sm:text-sm text-[9px]'>and contests</p>
+            <p className=' md_2:text-xl md:text-base sm:text-sm sm_1:text-[9px] text-[8px]'>and contests</p>
         </div>
             <Image src={'/roadmap 3.png'} alt='dog' width={300} height={400} className=' w-full object-contain object-center'/>
         </div>
         <div className=' bg-[#8F3A3C] flex-col rounded-se-3xl flex justify-between items-center'>
         <div className=' md:px-5 px-3 md:pt-5 pt-3'>
             <p>Expansions and New</p>
-            <p className=' md_2:text-xl md:text-base sm:text-sm text-[9px]'>Features</p>
+            <p className=' md_2:text-xl md:text-base sm:text-sm sm_1:text-[9px] text-[8px]'>Features</p>
         </div>
             <Image src={'/roadmap 4.png'} alt='dog' width={300} height={400} className=' w-full object-contain object-center'/>
         </div>
@@ -56,7 +56,7 @@ const RoadMapSection = () => {
 
       <div className=' absolute z-0 sm:bottom-24 bottom-16 left-0 w-full sm:h-[300px] sm_1:h-[250px] h-[200px] md_2:hidden block bg-[#ffc700]' aria-hidden></div>
 
-      <div aria-hidden className=' md_2:hidden block sm:h-24 h-16 w-full bg-[#ffc700] pointer-events-none' style={{clipPath:"polygon(0% 0%, 100% 0%, 100% 100%, 0% 0%)"}}/>
+      <div aria-hidden className=' md_2:hidden block sm:h-24 h-16 w-full bg-[#ffc700] pointer-events-none -translate-y-[1px]' style={{clipPath:"polygon(0% 0%, 100% 0%, 100% 100%, 0% 0%)"}}/>
 
 
     </section>

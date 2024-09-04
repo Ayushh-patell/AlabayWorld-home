@@ -135,7 +135,7 @@ const HomeSliderScreen = () => {
         <button onClick={OpeningORClosingSlider} className=' rounded-full sm:bg-[#FFF6A1] bg-[#353535] sm:w-32 w-20 sm:h-3 h-2'></button>
     </div>
     {/* FIRST SECTION */}
-    <section className=' relative xl:h-[130%] md_2:h-[110%] w-full md_2:pb-0 sm_1:pb-20 pb-8 bg-white'>
+    <section className=' relative xl:h-[130%] md_2:h-[110%] w-full md_2:pb-0 sm_1:pb-16 pb-12 bg-white'>
     <div className=' sm:py-4 py-3 flex justify-center items-center relative z-10'>
         <button onClick={OpeningORClosingSlider} className=' rounded-full sm:bg-[#FFF6A1] bg-[#353535] sm:w-32 w-20 sm:h-3 h-2'></button>
     </div>
@@ -146,7 +146,7 @@ const HomeSliderScreen = () => {
         <p className={` text-[#353535] ${kumbh.className} font-bold lg:text-3xl md_1:text-2xl sm:text-lg text-sm`}>The Central Asian Shepherd Dog, also known as Alabay, has been a guardian of livestock and property for centuries. Originating from Central Asia, these dogs are renowned for their courage, strength, and loyalty.</p>
         {/* <p className={` md_1:hidden block text-[#353535] ${kumbh.className} font-bold text-lg`}>The Central Asian Shepherd Dog, also known as Alabay, has been a guardian of livestock and property for centuries. <span className=' '> Originating from Central Asia, these dogs are renowned for their courage, strength, and loyalty.</span></p> */}
     </div>
-    <Image src={'/sliderfirstDog.png'} alt='dog' width={700} height={1000} className=' pointer-events-none absolute z-10 left-0 sm:top-[10%] top-[15%] md_1:w-1/2 md:w-2/3 sm_1:w-[64%] sm_2:w-3/5 w-[55%] object-contain object-center '/>
+    <Image src={'/sliderfirstDog.png'} alt='dog' width={700} height={1000} className=' pointer-events-none absolute z-10 left-0 sm:top-[10%] top-[5%] md_1:w-1/2 md:w-2/3 sm_1:w-[64%] sm_2:w-3/5 w-[55%] object-contain object-center '/>
 
     <div className=' md_2:hidden block w-full'>
 {/* CAROUSEL SECTION (MOBILE) */}

@@ -5,8 +5,8 @@ import React from 'react'
 const mont = Montserrat({subsets:['cyrillic'], adjustFontFallback:false})
 const GamePreviews = () => {
   return (
-    <div className=' w-full sm:py-16 py-8 md_2:px-24 sm:px-10 px-4'>
-      <h3 className={` text-[#FFA800] font-black md_2:text-4xl sm:text-2xl text-lg ${mont.className} my-5`}>GAME <span className=' text-[#353535]'>PREVIEWS</span></h3>
+    <div className=' w-full sm:py-16 py-4 md_2:px-24 sm:px-10 px-4'>
+      <h3 className={` text-[#FFA800] font-black md_2:text-4xl sm:text-2xl text-lg ${mont.className} sm:my-5 my-0 sm:mb-5 mb-1`}>GAME <span className=' text-[#353535]'>PREVIEWS</span></h3>
 
       <div className=' w-full sm:py-10 py-6 pt-0 flex justify-start items-center md:gap-4 gap-2'>
         <div className=' w-11/12 overflow-hidden flex justify-start items-center md:gap-7 sm_2:gap-4 gap-1'>

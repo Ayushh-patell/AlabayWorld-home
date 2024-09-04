@@ -45,7 +45,7 @@ const GamesCarousel = () => {
     },[slide])
 
   return (
-        <div className=' w-full relative z-10 md:pt-12 pt-8'>
+        <div className=' w-full relative z-10'>
             {/* <button onClick={slideLeft} disabled={disableLeft} className=' active:scale-90 transition-all duration-300 w-10 flex-shrink-0 p-2 aspect-[3/4] rounded-lg bg-[#353535]' style={{boxShadow:'4px 3px 10px rgba(0,0,0,0.65)'}}><Image src={'/Arrow.svg'} alt='Arrow Left' width={50} height={50} className=' w-fulll rotate-180'/></button> */}
             <div className=' w-full h-full overflow-hidden flex justify-start items-center'>
  
@@ -63,11 +63,11 @@ const GamesCarousel = () => {
                         </div>
 
                     {/* DISCOVER BUTTON */}
-                    <Link href={currentSlide.link}><button className={` active:scale-90 transition-all duration-300 absolute lg:bottom-32 sm:bottom-20 bottom-10 left-1/2 -translate-x-1/2 flex justify-center items-center gap-3 sm:px-7 px-4 sm:pr-5 pr-2 py-2 sm:text-lg text-xs font-black text-white rounded-full ${mont.className}`} style={{backgroundColor:`${currentSlide.color}`, boxShadow:"5px 5px 5px rgba(0,0,0,0.5)"}}>DISCOVER <Image src={'/Thin Arrow.png'} alt='arrow' width={22} height={20} className=' object-contain object-center'/></button></Link>
+                    <Link href={currentSlide.link}><button className={` active:scale-90 transition-all duration-300 absolute lg:bottom-32 sm:bottom-20 bottom-10 left-1/2 -translate-x-1/2 flex justify-center items-center sm:gap-3 gap-2 sm:px-7 px-4 sm:pr-5 pr-2 py-2 sm:text-lg text-xs font-black text-white rounded-full ${mont.className}`} style={{backgroundColor:`${currentSlide.color}`, boxShadow:"5px 5px 5px rgba(0,0,0,0.5)"}}>DISCOVER <Image src={'/Thin Arrow.png'} alt='arrow' width={22} height={20} className=' sm:h-5 h-4 object-contain object-center'/></button></Link>
 
 
             </div>
-            <button onClick={slideRight} disabled={disableRight} className=' active:scale-90 transition-all duration-300 w-10 flex-shrink-0 p-2 aspect-[3/4] rounded-lg bg-[#353535] absolute top-1/2 -translate-y-1/2 sm:right-[12%] right-7' style={{boxShadow:'4px 3px 10px rgba(0,0,0,0.65)'}}><Image src={'/Arrow.svg'} alt='Arrow Right' width={50} height={50} className=' w-ful'/></button>
+            <button onClick={slideRight} disabled={disableRight} className=' active:scale-90 transition-all duration-300 sm:w-10 w-7 flex-shrink-0 sm:p-2 p-[6px] aspect-[3/4] rounded-lg bg-[#353535] absolute top-1/2 -translate-y-1/2 sm:right-[12%] right-7' style={{boxShadow:'4px 3px 10px rgba(0,0,0,0.65)'}}><Image src={'/Arrow.svg'} alt='Arrow Right' width={50} height={50} className=' w-ful'/></button>
         </div>
   )
 }

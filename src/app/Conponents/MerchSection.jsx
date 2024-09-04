@@ -8,7 +8,7 @@ const MerchSection = () => {
     <section className=' w-full pt-10 bg-white relative'>
           <div aria-hidden className=' md_2:hidden block sm:h-24 h-16 w-full bg-[#ffc700] pointer-events-none' style={{clipPath:"polygon(100% 0%, 100% 0%, 100% 100%, 0% 100%)"}}/>
 
-      <h2 className=' md_2:text-9xl sm:text-7xl sm_1:text-5xl text-4xl font-burga md_2:text-[#353535] text-white md_2:mb-5 md_2:pb-0 sm_1:pb-5 pb-2 text-center md_2:bg-transparent bg-[#ffc700]'>MERCH STORE</h2>
+      <h2 className=' md_2:text-9xl sm:text-7xl sm_1:text-5xl text-4xl font-burga md_2:text-[#353535] text-white md_2:mb-5 md_2:pb-0 sm_1:pb-5 pb-0 text-center md_2:bg-transparent bg-[#ffc700]'>MERCH STORE</h2>
       <p className={` ${mont.className} md_2:text-[#ffc700] text-[#353535] md_2:text-2xl sm:text-lg sm_1:text-sm text-[10px] font-black text-center md_2:bg-transparent bg-[#ffc700]`}>Tshirts, Hoodies, Coffee-Mugs, Caps and many more !</p>
 
       {/* MERCH CAROUSEL */}
@@ -35,7 +35,7 @@ const MerchSection = () => {
           <div className=' sm_2:w-1/3 w-[30%] h-full flex flex-col justify-center items-start'>
             <p className=' md_2:text-[#9d9460]/85 text-[#FFF280] font-burga xl:text-6xl lg:text-5xl md_2:text-4xl sm:text-3xl sm_1:text-xl text-sm'>DESIGNS</p>
             <p className=' xl:text-6xl lg:text-5xl md_2:text-4xl sm:text-3xl sm_1:text-xl text-sm font-burga md_2:text-[#353535] text-white'>PAW-FECTLY</p>
-            <p className=' font-hel-bold md_2:text-xl sm:text-base text-xs md_2:text-[#353535] text-white sm:mb-6 mb-3'>Suited for you!</p>
+            <p className=' font-hel-bold md_2:text-xl sm:text-base text-[9px] md_2:text-[#353535] text-white sm:mb-6 mb-3'>Suited for you!</p>
             <button className={` rounded-full md_2:px-5 sm:px-3 px-2 md_2:py-3 sm:py-2 py-1 flex justify-center items-center gap-3 sm:text-xs text-[9px] text-white bg-[#353535] ${mont.className}`}>Discover<Image src={'/Thin Arrow.png'} alt='arrow' width={12} height={12} className=' object-contain object-center'/></button>
           </div>
 

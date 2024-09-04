@@ -11,9 +11,9 @@ const SocialMediaLinksSection = () => {
     <div className=' md_2:hidden block absolute top-0 left-0 w-full h-full bg-[#ffc700]' style={{clipPath:"polygon(0% 15%, 100% 0%, 100% 100%, 0% 100%)"}}></div>
 
         <h2 className=' lg:text-9xl md_2:text-7xl sm_1:text-5xl text-4xl font-burga md_2:text-[#FFA800] text-white lg:pt-20 pt-14 lg:pb-28 md_2:pb-20 pb-8 sm_1:px-10 px-4 relative z-10'>SOCIAL MEDIA <br /> LINKS</h2>
-    <div className=' w-full flex justify-between items-end  gap-5'>
+    <div className=' w-full flex justify-between items-end  sm:gap-5 gap-0'>
 
-    <div className=' w-1/2 lg:p-20 p-4 pr-0'>
+    <div className=' sm:w-1/2 w-[45%] lg:p-20 p-4 pr-0'>
         <div className=' w-full relative'>
             <Image src={'/ChatBubble.svg'} alt='chat bubble' width={200} height={150} className=' relative z-0 w-full object-contain object-center'/>
             <div className=' absolute z-10 top-0 left-0 w-full h-full md_2:p-5 sm_0_1:p-3 p-2 flex justify-center items-start flex-col md_2:gap-8 sm_1:gap-4 gap-2'>
@@ -36,8 +36,8 @@ const SocialMediaLinksSection = () => {
         </div>
     </div>
 
-    <div className=' w-1/2 relative z-10 h-full'>
-        <Image src={'/SocialLinks.png'} alt=' dog' width={400} height={1000} className=' w-full md:px-10 px-2 absolute -bottom-10 left-1/2 -translate-x-1/2 object-contain object-center z-10' />
+    <div className=' sm:w-1/2 w-[55%] relative z-10 h-full'>
+        <Image src={'/SocialLinks.png'} alt=' dog' width={400} height={1000} className=' w-full md:px-10 sm:px-2 px-0 absolute -bottom-12 left-1/2 -translate-x-1/2 object-contain object-center z-10' />
     </div>
     </div>
     </div>
