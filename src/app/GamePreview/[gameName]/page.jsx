@@ -29,7 +29,7 @@ const Page = ({params}) => {
 
             <button className=' active:scale-90 transition-all duration-200 md:px-10 px-6 md:pl-4 pl-2 md:py-3 py-2 my-7 flex justify-between items-center md:gap-5 gap-3 rounded-full' style={{backgroundColor:`${GamePreviewLinkData[params.gameName].primaryClr}`}}>
               <Image src={'/play.png'} alt='play' width={30} height={30} className=' object-contain object-center' />
-              <p className=' font-hel-normal font-bold md:text-lg text-base text-[#201E26]'>PLAY</p>
+              <p className=' font-hel-normal font-bold md:text-lg text-base text-[#201E26]'>COMING SOON</p>
             </button>
           </div>
           </div>

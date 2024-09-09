@@ -2,6 +2,7 @@
 import { GamePreviewLinkData } from '@/app/GamePreviewLinkData'
 import { Montserrat } from 'next/font/google'
 import Image from 'next/image'
+import Link from 'next/link'
 import React, { useEffect, useRef } from 'react'
 
 
@@ -31,11 +32,13 @@ const AfterScrollEl = ({gameName}) => {
     <div className=' w-full mt-5 flex justify-start items-center gap-6'>
     <button className=' active:scale-90 transition-all duration-200 md:px-10 px-6 mx:pl-4 pl-2 md:py-3 py-2 flex justify-between items-center md:gap-5 gap-3 rounded-full bg-white'>
             <Image src={'/play.png'} alt='play' width={30} height={30} className=' object-contain object-center' />
-            <p className=' font-hel-normal font-bold md:text-lg text-base text-[#201E26]'>PLAY</p>
+            <p className=' font-hel-normal font-bold md:text-lg text-base text-[#201E26]'>COMING SOON</p>
           </button>
+    <Link href={'/'}>
     <button className=' active:scale-90 transition-all duration-200 md:px-16 px-8 md:py-3 py-2 flex justify-between items-center gap-5 rounded-full bg-transparent md:border-4 border-2 border-white'>
             <p className=' font-hel-normal font-bold md:text-lg text-base text-white'>EXIT</p>
           </button>
+    </Link>
     </div>
   </div>
   )
