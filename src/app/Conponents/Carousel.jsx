@@ -10,9 +10,9 @@ const Carousel = () => {
     const [active, setactive] = useState('ALL')
     // const SlideData = ['photo 1','photo 2','photo 3','photo 4','photo 5','photo 6','photo 7','photo 8','photo 9','photo 10','photo 11',]
     const [slide, setslide] = useState(1);
+    const [slideNum, setslideNum] = useState(0)
     const [currentData, setcurrentData] = useState([...SlideData])
     const [updatedSlideData, setupdatedSlideData] = useState([]);
-    const [slideNum, setslideNum] = useState(0)
     const [disableLeft, setdisableLeft] = useState(false)
     const [disableRight, setdisableRight] = useState(false)
 
