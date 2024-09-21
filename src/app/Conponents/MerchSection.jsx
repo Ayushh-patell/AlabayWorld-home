@@ -205,10 +205,10 @@ useEffect(() => {
 {/* OLD DESIGN */}
 
 
-        <button onClick={slideLeft} disabled={disableLeft} className=' absolute z-40 top-1/2 -translate-y-1/2 md:left-10 sm_1:left-4 left-4 rounded-full sm:p-1 p-[2px] bg-white shadow-xl'>
+        <button onClick={slideLeft} disabled={disableLeft} className=' absolute z-40 top-1/2 -translate-y-1/2 md:left-10 sm_1:left-4 left-5 rounded-full sm:p-1 p-[2px] bg-white shadow-xl'>
             <Image src={'/merchArrow.svg'} alt='Arrow Left' width={50} height={50} className=' rotate-180 sm:size-10 size-7 object-contain object-center'/>
         </button>
-        <button onClick={slideRight} disabled={disableRight} className=' absolute z-40 top-1/2 -translate-y-1/2 md:right-10 sm_1:right-4 right-4 rounded-full sm:p-1 p-[2px] bg-white shadow-xl'>
+        <button onClick={slideRight} disabled={disableRight} className=' absolute z-40 top-1/2 -translate-y-1/2 md:right-10 sm_1:right-4 right-5 rounded-full sm:p-1 p-[2px] bg-white shadow-xl'>
             <Image src={'/merchArrow.svg'} alt='Arrow Right' width={50} height={50} className=' sm:size-10 size-7 object-contain object-center'/>
         </button>
       </div>
