@@ -91,7 +91,7 @@ useEffect(() => {
       <Image id='defaultMerchBg' src={MerchCarouselData[0].bgSrc} alt='background' width={1000} height={500} className=' MerchSlideBG xl:w-[70%] md_2:w-4/5 w-[90%] rounded-2xl object-contain object-center relative z-0'/>
 
       {MerchCarouselData && MerchCarouselData.slice(1, MerchCarouselData.length).map((data,i) => (
-      <Image src={data.bgSrc} alt='background' width={1000} height={500} style={{zIndex:`${i+1}`}} className=' MerchSlideBG xl:w-[70%] md_2:w-4/5 w-[90%] rounded-2xl object-contain object-center absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-0'/>
+      <Image key={i} src={data.bgSrc} alt='background' width={1000} height={500} style={{zIndex:`${i+1}`}} className=' MerchSlideBG xl:w-[70%] md_2:w-4/5 w-[90%] rounded-2xl object-contain object-center absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-0'/>
       ))}
 
       {/* <Image src={MerchCarouselData[0].bgSrc} alt='background' width={1000} height={500} className=' MerchSlideBG xl:w-[70%] md_2:w-4/5 w-[90%] rounded-2xl object-contain object-center absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10 opacity-0'/> */}
