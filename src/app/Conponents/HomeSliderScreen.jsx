@@ -81,6 +81,7 @@ const HomeSliderScreen = () => {
         return () => {
             window.removeEventListener('touchstart', touchStartHandler);
             window.removeEventListener('touchend', touchEndHandler);
+            window.removeEventListener('wheel', wheelHandler);
         }
     }, [Open])
     

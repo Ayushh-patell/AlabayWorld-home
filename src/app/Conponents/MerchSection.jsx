@@ -13,6 +13,7 @@ const MerchSection = () => {
   const [disableLeft, setdisableLeft] = useState(false);
   const [disableRight, setdisableRight] = useState(false);
   const timerRef = useRef();
+  const merchRef = useRef(); 
 
   const slideLeft = () => {
     setdisableLeft(true)
@@ -20,12 +21,15 @@ const MerchSection = () => {
       let newslideval = slide -1
       setslide(newslideval)
       gsap.to(".MerchSlide", {translateX:`-${newslideval*100}%`, duration:1, ease:"power1.inOut", onComplete:(() => {setdisableLeft(false)})})
+
+     
     }
     else {
         let newslideval = slideNum;
         setslide(newslideval)
         gsap.to(".MerchSlide", {translateX:`-0%`, duration:1, ease:"power1.inOut", onComplete:(() => {setdisableLeft(false)})})
         gsap.set('.MerchSlide', {translateX:`-${newslideval*100}%`, delay:1})
+
         
   }
 }
@@ -33,20 +37,25 @@ const slideRight = () => {
     setdisableRight(true)
     
     if(slide<slideNum-1) {
-    let newslideval = slide +1
-    setslide(newslideval)
-        gsap.to(".MerchSlide", {translateX:`-${newslideval*100}%`, duration:1, ease:"power1.inOut", onComplete:(() => {setdisableRight(false)})})
+      let newslideval = slide +1
+      setslide(newslideval)
+      gsap.to(".MerchSlide", {translateX:`-${newslideval*100}%`, duration:0.7, ease:"power1.inOut", onComplete:(() => {setdisableRight(false)})})
+
     }
     else {
-        let newslideval = 0
-        setslide(newslideval)
-        gsap.to(".MerchSlide", {translateX:`-${(slideNum)*100}%`, duration:1, ease:"power1.inOut", onComplete:(() => {setdisableRight(false)})})
-        gsap.set('.MerchSlide', {translateX:`0%`, delay:1})
+      let newslideval = 0
+      setslide(newslideval)
+      gsap.to(".MerchSlide", {translateX:`-${(slideNum)*100}%`, duration:0.7, ease:"power1.inOut", onComplete:(() => {setdisableRight(false)})})
+      gsap.set('.MerchSlide', {translateX:`0%`, delay:0.7})
+
     }
 }
 
 
 useEffect(() => {
+  let bgSlide = slide===0? 4:slide;
+  Array.from(document.querySelectorAll('.MerchSlideBG')).forEach((bg,i) =>  gsap.to(bg, {opacity:`${(i===(bgSlide-1))? 1:0}`, duration:0.7, ease:"power1.inOut"}))
+  
   clearInterval(timerRef.current);
   timerRef.current = setInterval(() => {
     slideRight();
@@ -56,25 +65,62 @@ useEffect(() => {
 },[slide])
 
 
+useEffect(() => {
+  if(merchRef.current) {
+    console.log(document.getElementById('defaultMerchBg').clientWidth);
+    
+    merchRef.current.style.width = `${document.getElementById('defaultMerchBg').clientWidth}px`
+  }
+},[])
+
+
 
   return (
     <section className=' w-full md_2:py-10 sm_0_1:py-32 py-20 bg-white relative'>
 
 <div id='mobileMerchGradient' className=' absolute top-0 left-0 w-full h-full z-0' style={{clipPath:"polygon(0% 15%, 100% 0%, 100% 100%, 0% 85%)"}}></div>
       <h2 className=' md_2:text-9xl sm:text-7xl sm_1:text-5xl text-4xl font-burga md_2:text-[#FFA800] text-white md_2:mb-5 md_2:pb-0 sm_1:pb-5 pb-0 text-center md_2:bg-transparent relative z-10 '>MERCHANDISE</h2>
-      {/* <p className={` ${mont.className} md_2:text-[#ffc700] text-[#353535] md_2:text-2xl sm:text-lg sm_1:text-sm text-[10px] font-black text-center md_2:bg-transparent relative z-10 `}>Tshirts, Hoodies, Coffee-Mugs, Caps and many more !</p> */}
 
+
+      {/* div just to add padding */}
+      <div className=' w-full sm_1:p-8 p-4 md_2:px-16 sm_1:px-0 px-0  relative'>
       {/* MERCH CAROUSEL */}
-      <div className=' w-full sm_1:p-8 p-4 md_2:px-16 sm_1:px-0 px-0 flex justify-start items-center relative overflow-hidden z-10 md_2:bg-transparent'>
+      <div className=' h-fit w-full flex justify-center items-center relative overflow-hidden z-10 md_2:bg-transparent'>
 
+{/* BACKGROUND */}
+      <Image id='defaultMerchBg' src={MerchCarouselData[0].bgSrc} alt='background' width={1000} height={500} className=' MerchSlideBG xl:w-[70%] md_2:w-4/5 w-[90%] rounded-2xl object-contain object-center relative z-0'/>
+
+      {MerchCarouselData && MerchCarouselData.slice(1, MerchCarouselData.length).map((data,i) => (
+      <Image src={data.bgSrc} alt='background' width={1000} height={500} style={{zIndex:`${i+1}`}} className=' MerchSlideBG xl:w-[70%] md_2:w-4/5 w-[90%] rounded-2xl object-contain object-center absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-0'/>
+      ))}
+
+      {/* <Image src={MerchCarouselData[0].bgSrc} alt='background' width={1000} height={500} className=' MerchSlideBG xl:w-[70%] md_2:w-4/5 w-[90%] rounded-2xl object-contain object-center absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10 opacity-0'/> */}
+
+{/* FOREGROUND */}
+  <div ref={merchRef} className=' absolute z-30 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-full flex justify-start items-center overflow-hidden'>
+<Image src={MerchCarouselData[MerchCarouselData.length-1].merchSrc} alt='cap' width={500} height={500} className='MerchSlide -translate-x-full flex-shrink-0 w-full z-10'/>
+
+  {MerchCarouselData && MerchCarouselData.map((data,i) => (
+    <Image key={i} src={data.merchSrc} alt='cap' width={500} height={500} className='MerchSlide -translate-x-full flex-shrink-0 w-full z-10'/>
+))}
+<Image src={MerchCarouselData[0].merchSrc} alt='cap' width={500} height={500} className='MerchSlide -translate-x-full flex-shrink-0 w-full z-10'/>
+
+
+
+  <button className={` active:scale-90 transition-all duration-300 bg-[#1F2029] sm_1:px-5 px-3 sm_0_1:py-2 py-1 lg:w-[25%] w-[35%] rounded-full lg:text-xl md:text-lg sm_0_1:text-base sm_1:text-sm text-[9px] absolute left-1/2 -translate-x-[49%] bottom-[6%] z-10 ${mont.className} font-medium`}>Discover</button>
+  <p className={` ${mont.className} font-black text-black lg:text-lg md:text-base sm_0_1:text-sm sm_1:text-xs text-[7px] absolute z-10 md_2:right-[15%] right-[10%] top-[20%]`}>Coming Soon...</p>
+  </div>
+
+
+
+{/* VERSION 2 */}
 {/* THE LAST MERCH DATA AT THE FRONT FOR INFINITE CAROUSEL DESIGN */}
-      <div className=' MerchSlide flex-shrink-0 w-full h-fit flex justify-center items-center relative -translate-x-full'>
-  <Image src={MerchCarouselData[MerchCarouselData.length-1].bgSrc} alt='background' width={1000} height={500} className=' xl:w-[70%] md_2:w-4/5 w-[90%] rounded-2xl object-contain object-center relative z-0'/>
+      {/* <div className=' MerchSlide flex-shrink-0 w-full h-fit flex justify-center items-center relative -translate-x-full'>
   <Image src={MerchCarouselData[MerchCarouselData.length-1].merchSrc} alt='cap' width={500} height={500} className=' absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2  w-2/3 z-10'/>
   <button className={` active:scale-90 transition-all duration-300 bg-[#1F2029] sm_1:px-5 px-3 sm_0_1:py-2 py-1 lg:w-[20%] w-[30%] rounded-full lg:text-xl md:text-lg sm_0_1:text-base sm_1:text-sm text-xs absolute left-1/2 -translate-x-[49%] bottom-[7%] z-10 ${mont.className} font-medium`}>Discover</button>
   <p className={` ${mont.className} font-black text-black lg:text-lg md:text-base sm_0_1:text-sm sm_1:text-xs text-[9px] absolute z-10 md_2:right-[22%] right-[18%] top-[20%]`}>Coming Soon...</p>
-</div>
-
+</div> */}
+{/* 
 {MerchCarouselData && MerchCarouselData.map((data,i) => (
   <div key={i} className=' MerchSlide flex-shrink-0 w-full h-fit flex justify-center items-center relative -translate-x-full'>
   <Image src={data.bgSrc} alt='background' width={1000} height={500} className=' xl:w-[70%] md_2:w-4/5 w-[90%] rounded-2xl object-contain object-center relative z-0'/>
@@ -82,14 +128,13 @@ useEffect(() => {
   <button className={` active:scale-90 transition-all duration-300 bg-[#1F2029] sm_1:px-5 px-3 sm_0_1:py-2 py-1 lg:w-[20%] w-[30%] rounded-full lg:text-xl md:text-lg sm_0_1:text-base sm_1:text-sm text-xs absolute left-1/2 -translate-x-[49%] bottom-[7%] z-10 ${mont.className} font-medium`}>Discover</button>
   <p className={` ${mont.className} font-black text-black lg:text-lg md:text-base sm_0_1:text-sm sm_1:text-xs text-[9px] absolute z-10 md_2:right-[22%] right-[18%] top-[20%]`}>Coming Soon...</p>
 </div>
-))}
+))} */}
 {/* THE FIRST MERCH DATA AT THE FRONT FOR INFINITE CAROUSEL DESIGN */}
-<div className=' MerchSlide flex-shrink-0 w-full h-fit flex justify-center items-center relative -translate-x-full'>
-  <Image src={MerchCarouselData[0].bgSrc} alt='background' width={1000} height={500} className=' xl:w-[70%] md_2:w-4/5 w-[90%] rounded-2xl object-contain object-center relative z-0'/>
+{/* <div className=' MerchSlide flex-shrink-0 w-full h-fit flex justify-center items-center relative -translate-x-full'>
   <Image src={MerchCarouselData[0].merchSrc} alt='cap' width={500} height={500} className=' absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2  w-2/3 z-10'/>
   <button className={` active:scale-90 transition-all duration-300 bg-[#1F2029] sm_1:px-5 px-3 sm_0_1:py-2 py-1 lg:w-[20%] w-[30%] rounded-full lg:text-xl md:text-lg sm_0_1:text-base sm_1:text-sm text-xs absolute left-1/2 -translate-x-[49%] bottom-[7%] z-10 ${mont.className} font-medium`}>Discover</button>
   <p className={` ${mont.className} font-black text-black lg:text-lg md:text-base sm_0_1:text-sm sm_1:text-xs text-[9px] absolute z-10 md_2:right-[22%] right-[18%] top-[20%]`}>Coming Soon...</p>
-</div>
+</div> */}
 
 
 {/* OLD DESIGN */}
@@ -160,12 +205,14 @@ useEffect(() => {
 {/* OLD DESIGN */}
 
 
-        <button onClick={slideLeft} disabled={disableLeft} className=' absolute top-1/2 -translate-y-1/2 md:left-10 sm_1:left-4 left-2 rounded-full p-1 bg-white shadow-xl'>
+        <button onClick={slideLeft} disabled={disableLeft} className=' absolute z-40 top-1/2 -translate-y-1/2 md:left-10 sm_1:left-4 left-2 rounded-full p-1 bg-white shadow-xl'>
             <Image src={'/merchArrow.svg'} alt='Arrow Left' width={50} height={50} className=' rotate-180 sm:size-10 size-6 object-contain object-center'/>
         </button>
-        <button onClick={slideRight} disabled={disableRight} className=' absolute top-1/2 -translate-y-1/2 md:right-10 sm_1:right-4 right-2 rounded-full p-1 bg-white shadow-xl'>
+        <button onClick={slideRight} disabled={disableRight} className=' absolute z-40 top-1/2 -translate-y-1/2 md:right-10 sm_1:right-4 right-2 rounded-full p-1 bg-white shadow-xl'>
             <Image src={'/merchArrow.svg'} alt='Arrow Right' width={50} height={50} className=' sm:size-10 size-6 object-contain object-center'/>
         </button>
+      </div>
+
       </div>
 
 
