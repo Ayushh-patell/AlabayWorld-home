@@ -83,7 +83,7 @@ useEffect(() => {
 
 
       {/* div just to add padding */}
-      <div className=' w-full sm_1:p-8 p-4 md_2:px-16 sm_1:px-0 px-0  relative'>
+      <div className=' w-full sm_1:p-8 p-2 md_2:px-16 sm_1:px-0 px-0  relative'>
       {/* MERCH CAROUSEL */}
       <div className=' h-fit w-full flex justify-center items-center relative overflow-hidden z-10 md_2:bg-transparent'>
 
