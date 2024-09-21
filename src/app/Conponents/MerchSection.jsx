@@ -107,7 +107,7 @@ useEffect(() => {
 
 
 
-  <button className={` active:scale-90 transition-all duration-300 bg-[#1F2029] sm_1:px-5 px-3 sm_0_1:py-2 py-1 lg:w-[25%] w-[35%] rounded-full lg:text-xl md:text-lg sm_0_1:text-base sm_1:text-sm text-[9px] absolute left-1/2 -translate-x-[49%] bottom-[6%] z-10 ${mont.className} font-medium`}>Discover</button>
+  <button className={` active:scale-90 transition-all duration-300 bg-[#1F2029] sm_1:px-5 px-3 sm_0_1:py-2 py-1 lg:w-[25%] w-[35%] rounded-full lg:text-xl md:text-lg sm_0_1:text-base sm_1:text-sm text-[9px] absolute left-1/2 -translate-x-[49%] sm:bottom-[7%] bottom-[6%] z-10 ${mont.className} font-medium`}>Discover</button>
   <p className={` ${mont.className} font-black text-black lg:text-lg md:text-base sm_0_1:text-sm sm_1:text-xs text-[7px] absolute z-10 md_2:right-[15%] right-[10%] top-[20%]`}>Coming Soon...</p>
   </div>
 
